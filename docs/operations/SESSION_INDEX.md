@@ -4,6 +4,6 @@
 
 | ID sesión | Rol | Issue | Estado al actualizar | Último checkpoint | Contexto y próximo paso |
 |---|---|---|---|---|---|
-| `coord-20261121-001` | Coordinadora | [#5](https://github.com/elVladdi/SIVEP_Inteligente/issues/5) | En revisión | [CP01](checkpoints/2026-11-21/coord-20261121-001-CP01.md) | PR #4: auditar protocolo y decidir fusión |
+| `coord-20261121-001` | Coordinadora | [#5](https://github.com/elVladdi/SIVEP_Inteligente/issues/5), [#6](https://github.com/elVladdi/SIVEP_Inteligente/issues/6) | En revisión | [CP02](checkpoints/2026-11-21/coord-20261121-001-CP02.md) | PR #4: auditar regla de entrada/salida y aprobar fusión |
 
 Al crear CP02, CP03, etc., actualizar la fila. Para tareas paralelas registrar **sesiones distintas**, no reemplazar su historial. El archivo de checkpoint publicado es inmutable; la revisión se hace creando el siguiente.

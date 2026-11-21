@@ -4,7 +4,8 @@
 - Rol: Coordinación; proveedor OpenAI; modelo GPT-6
 - Issue: #6
 - PR: #4; rama docs/agent-bootstrap-and-handoffs
-- Archivo de rol usado: prompts/COORDINATOR.md (ver SHA de publicación del registro)
+- Archivo de rol consultado para esta implementación: `prompts/COORDINATOR.md` en la versión base `2e05d90109b722974e06b51e553507cb6dd5457f` (consulta verificada).
+- Entrada de este turno: instrucción directa del usuario en el chat actual; no fue una invocación mediante ruta.
 - Seguridad: solo contenido publicable
 
 ## Prompt completo
