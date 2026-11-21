@@ -7,6 +7,12 @@
 - Sin lectura real de GitHub no afirmar acceso ni progreso; solicitar paquete documental y señalar incertidumbre.
 - La carga de `CLAUDE.md` por Claude Code no asigna automáticamente un rol de auditor. Claude Code puede implementar código si recibe el prompt de Desarrollo.
 
+## Continuidad de sesión y modo de trabajo
+- **INICIO:** no existe tarea en curso identificada; reconstruir estado sin inventar asignaciones.
+- **CONTINUACIÓN:** ante cambio de chat, límite de contexto, relevo de proveedor o tarea pausada, leer `docs/operations/SESSION_INDEX.md` y checkpoint pertinente de `docs/operations/checkpoints/` además de issue, PR, handoff y ADR. Preservar criterios aprobados y reanudar la siguiente acción exacta.
+- Guardar checkpoints al cierre de hitos, decisiones y antes de cerrar o cambiar de chat; ver `docs/operations/SESSION_CONTINUITY.md`. Reconocer explícitamente pérdida de contexto no registrado.
+- **Distinguir:** ADR = decisiones; checkpoint = estado/siguiente acción; handoff = relevo por tarea; ai-logs = prompts/respuestas completos visibles.
+
 ## Lectura inicial obligatoria
 1. README.md y PROJECT_STATE.md.
 2. docs/decisions/README.md y los ADR pertinentes.

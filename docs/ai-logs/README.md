@@ -31,3 +31,6 @@ Para información restringida: usar --confidentiality restricted --custody-ref <
 En cada PR revisar que los enlaces a docs/ai-logs/ cubren todas las iteraciones IA de la tarea. Los metadatos ayudan a auditar, pero el repositorio público no constituye almacenamiento autorizado para datos protegidos.
 ## Primer prompt de cada agente y cambio de modelo
 El **prompt inicial de rol** en `prompts/` también se documenta como intercambio, con el texto exacto enviado, la versión del archivo y la primera respuesta completa visible. Si se sustituye un desarrollador (Codex por Claude Code, o viceversa), registrar tanto el cierre del agente saliente como la apertura del agente entrante, asociándolos al mismo issue y al handoff. Enlazar la plantilla no reemplaza conservar el prompt efectivamente utilizado.
+
+## Relación con checkpoints de sesión
+Un checkpoint en `docs/operations/checkpoints/` resume el estado, acuerdos, evidencias y siguiente acción; **NO sustituye** el registro de cada prompt/respuesta visible. El índice `docs/operations/SESSION_INDEX.md` vincula sesión, último checkpoint, issue y logs. Los archivos se actualizan por PR para preservar el historial. Para chats interrumpidos sin registro, marcar expresamente falta de trazabilidad y no reconstruir texto inexistente.

@@ -24,6 +24,12 @@ Fecha de actualización: 2026-11-21. Estado: F0, preparación metodológica. No 
 - [docs/operations/HANDOFF_PROTOCOL.md](docs/operations/HANDOFF_PROTOCOL.md): relevo por issue, rama, SHA, PR, pruebas, pendientes y logs.
 - Issues iniciales: #1 (literatura), #2 (inventario conceptual) y #3 (toma de registros IA); sin asignación exclusiva de implementación confirmada.
 
+## Continuidad de sesiones
+- Aprobado: modos INICIO y CONTINUACIÓN para cualquier rol, modelo y chat (incluido un nuevo chat del mismo proyecto ChatGPT).
+- [SESSION_INDEX.md](docs/operations/SESSION_INDEX.md): índice de checkpoints; [SESSION_CONTINUITY.md](docs/operations/SESSION_CONTINUITY.md): protocolo; [checkpoints/](docs/operations/checkpoints/): estados verificables por sesión.
+- Issue #5: implementar protocolo y puntos de control; PR #4: integración pendiente de auditoría y fusión.
+- El estado no registrado no puede recuperarse con certeza; la captura de chats externos sigue requiriendo integraciones o exportación manual.
+
 ## Próximos pasos
 1. Revisión bibliográfica y normativa crítica; matriz de evidencias y límites de aplicación.
 2. Diseño de protocolo de etiquetado de mercancías por expertos.

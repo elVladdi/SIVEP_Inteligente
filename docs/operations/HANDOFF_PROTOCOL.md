@@ -21,3 +21,5 @@ En un repo público no escribir datos reales SIVEP/DAM ni secretos. Para una con
 
 ## Conflictos
 Prevalecen decisiones humanas aprobadas y ADR aplicables para criterios, mientras que el **estado técnico actual** se verifica por commits, PR e issues. La discrepancia exige investigación, no suposición ni modificación silenciosa.
+## Continuación en un nuevo chat del mismo modelo y proyecto
+El procedimiento es el mismo que al cambiar de herramienta: pegar el **prompt del mismo rol** en el chat nuevo, usar **CONTINUACIÓN**, leer `docs/operations/SESSION_INDEX.md` y el checkpoint pertinente, cotejar con issue/PR/ADR/commit y seguir la acción pendiente. El handoff se crea **por issue**, el checkpoint **por sesión/hito**, y los logs conservan los turnos completos visibles. Véase `docs/operations/SESSION_CONTINUITY.md`.
