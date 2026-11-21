@@ -96,7 +96,7 @@ Las publicaciones se examinan a partir de su pregunta de investigación, fuentes
 
 **Contribución.** Es el antecedente **funcional integrado** más cercano a una plataforma que reúna identificación de productos, antecedentes, análisis de valores y explicaciones. Su debilidad principal es la ausencia de detalle sobre algoritmos y validación de la identidad o similitud de mercancías.
 
-## 3. Cuadro comparativo de las publicaciones
+## 3. Cuadro comparativo general de los ocho estudios
 
 | N.º | Estudio y ámbito | Pregunta central | Método principal | Base empírica | Resultado comunicado | Limitación para el análisis de mercancías comparables |
 |---|---|---|---|---|---|---|
@@ -111,7 +111,7 @@ Las publicaciones se examinan a partir de su pregunta de investigación, fuentes
 
 **Interpretación de las métricas.** La exactitud en transposición arancelaria, el F1 de detección de anomalías, la cobertura económica y la exactitud Top-3 de códigos HS **no son métricas comparables entre sí**. Cada una corresponde a una tarea, muestra y criterio de éxito diferentes. Ningún porcentaje de esta tabla mide directamente la precisión de identificar mercancías idénticas o similares en registros SIVEP.
 
-## 4. Cuadro de aportaciones de cada estudio a la investigación de SIVEP Inteligente
+## 4. Cuadro de aportación de cada artículo al análisis de SIVEP Inteligente
 
 La aportación se entiende aquí como **conocimiento, evidencia o limitación relevante para el problema de investigación**; no como aprobación de una técnica, requisito de desarrollo o secuencia de implementación.
 
