@@ -12,9 +12,9 @@
 
 ## Ejemplos de mensajes mínimos
 
-- `Activa el rol indicado; lee y ejecuta https://github.com/elVladdi/SIVEP_Inteligente/blob/main/prompts/COORDINATOR.md. Modo INICIO.`
-- `Activa el rol indicado; lee y ejecuta https://github.com/elVladdi/SIVEP_Inteligente/blob/main/prompts/DEVELOPER.md. Modo CONTINUACIÓN; issue #N.`
-- `Activa el rol indicado; lee y ejecuta https://github.com/elVladdi/SIVEP_Inteligente/blob/main/prompts/AUDITOR.md. Audita PR #N.`
+- `Activa la IA de Coordinación; lee y ejecuta https://github.com/elVladdi/SIVEP_Inteligente/blob/main/prompts/COORDINATOR.md. Modo INICIO.`
+- `Activa la IA de Desarrollo; lee y ejecuta https://github.com/elVladdi/SIVEP_Inteligente/blob/main/prompts/DEVELOPER.md. Modo CONTINUACIÓN; issue #N.`
+- `Activa la IA de Auditoría; lee y ejecuta https://github.com/elVladdi/SIVEP_Inteligente/blob/main/prompts/AUDITOR.md. Audita PR #N.`
 
 **Hasta fusionar el PR #4**, utiliza la rama `docs/agent-bootstrap-and-handoffs` en lugar de `main`.
 
