@@ -1,5 +1,7 @@
 # Protocolo de continuidad de sesiones IA — v1
 
+**Este protocolo de checkpoints corresponde solamente a agentes OPERATIVOS formalmente activados.** No aplicar a conversaciones de CONFIGURACIÓN ni reutilizar checkpoints históricos de diseño. Ver ADR-0008 y docs/operations/ACTIVATION_PROTOCOL.md.
+
 ## Propósito y alcance
 Recuperar una tarea en otro chat del **mismo modelo y proyecto**, o en otro modelo/proveedor, sin depender de memoria oculta. Aplica a coordinación, desarrollo y auditoría, tanto si el contexto se agota como si hay interrupción o relevo voluntario.
 

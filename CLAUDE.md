@@ -1,5 +1,7 @@
 # Uso de Claude y Claude Code en SIVEP Inteligente
 
+**Durante CONFIGURACIÓN no asumir rol operativo:** revisar o editar este documento no activa a Claude como IA Auditora/Desarrolladora. El responsable debe ordenar explícitamente la activación del rol y ejecución del prompt. Responder directamente en chat durante la configuración. Ver ADR-0008.
+
 **Este archivo NO asigna automáticamente el rol de auditor.** Claude/Claude Code pueden actuar como IA desarrolladora o auditora, según el primer prompt y la asignación expresos del responsable.
 
 1. Obtener **la ruta/URL** del prompt del rol, no su copia en el chat. Leer `AGENTS.md`, `PROJECT_STATE.md`, `docs/operations/ACTIVE_WORK.md`, ADR y `docs/operations/HANDOFF_PROTOCOL.md`.

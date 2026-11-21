@@ -14,3 +14,6 @@
 
 ## Consecuencias
 La documentación, estado y decisiones quedan en GitHub; el chat actúa como punto de entrada y entrega de ubicación. El cumplimiento real requiere permisos de lectura/escritura y verificación de publicación. No sustituye auditoría independiente ni aprobación humana de PR.
+
+## Aclaración de alcance (ADR-0008)
+Este ADR define el funcionamiento de **agentes formalmente activados**; no transforma retrospectivamente conversaciones de configuración en sesiones operativas. En configuración el asistente responde en el chat, sin la obligación de enviar solo un enlace o registrar cada turno como respuesta de agente. La activación exige orden humana expresa de leer y **ejecutar** el rol.

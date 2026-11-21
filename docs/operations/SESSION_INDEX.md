@@ -1,9 +1,13 @@
-# Índice de sesiones y puntos de control
+# Índice de sesiones de IA FORMALMENTE ACTIVADAS
 
-**Uso:** al abrir otro chat, lee este índice y localiza el último checkpoint del rol y tarea. Verifica siempre issue/PR/commits actuales; el índice no es un estado en tiempo real. Más detalles en `SESSION_CONTINUITY.md`.
+**Situación: no se ha activado formalmente ninguna IA.** No hay sesiones operativas ni checkpoints de agente válidos. En el primer uso, la activación debe ser expresa y recibirá un ID de sesión nuevo. Ver docs/operations/ACTIVATION_PROTOCOL.md y ADR-0008.
 
-| ID sesión | Rol | Issue | Estado al actualizar | Último checkpoint | Contexto y próximo paso |
-|---|---|---|---|---|---|
-| `coord-20261121-001` | Coordinadora | [#5](https://github.com/elVladdi/SIVEP_Inteligente/issues/5), [#6](https://github.com/elVladdi/SIVEP_Inteligente/issues/6), [#7](https://github.com/elVladdi/SIVEP_Inteligente/issues/7) | En revisión | [CP03](checkpoints/2026-11-21/coord-20261121-001-CP03.md) | PR #4: auditar enrutamiento entre IA y aprobar fusión |
+| ID de sesión operativa | Rol | Issue/PR | Estado | Último checkpoint |
+|---|---|---|---|---|
+| — | — | — | Sin sesiones operativas | — |
 
-Al crear CP02, CP03, etc., actualizar la fila. Para tareas paralelas registrar **sesiones distintas**, no reemplazar su historial. El archivo de checkpoint publicado es inmutable; la revisión se hace creando el siguiente.
+## Registros históricos de configuración (NO sesiones operativas)
+
+Los checkpoints de nombre coord-20261121-001-CP01.md, CP02.md y CP03.md fueron escritos durante el diseño del sistema y quedaron erróneamente clasificados como actividad de Coordinación. Se conservan con aviso de rectificación en docs/operations/checkpoints/2026-11-21/, pero **no son sesiones activas, ni deben retomarse como trabajo operativo**. Los archivos coordinator-0001..0006 son documentación de configuración; consultar docs/project-setup/README.md.
+
+Cuando se active un rol, crear ID nuevo y CP01, sin reutilizar coord-20261121-001.

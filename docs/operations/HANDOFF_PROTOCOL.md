@@ -1,5 +1,7 @@
 # Protocolo de continuidad y traspaso entre IA
 
+**Aplicación solo a roles activados formalmente** (ADR-0008). La CONFIGURACIÓN del sistema no es un handoff entre agentes y se responde normalmente en chat.
+
 **Principio:** la tarea no reside en el historial de ChatGPT, Codex o Claude. Reside en el **issue, rama, commit SHA, PR, decisiones ADR, registros de interacciones y handoff versionado**.
 
 ## Antes de iniciar una sesión

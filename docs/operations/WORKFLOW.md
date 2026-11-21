@@ -1,5 +1,7 @@
 # Flujo de trabajo supervisado y documentado
 
+**Ámbito:** la coordinación multiagente y las obligaciones por turno de este documento solo rigen después de la **activación expresa de un rol**, según docs/operations/ACTIVATION_PROTOCOL.md (ADR-0008). En CONFIGURACIÓN el asistente responde en chat y puede editar GitHub, sin constituirse en IA Coordinadora.
+
 ## Participantes
 - **Responsable humano:** aprueba objetivos, decisiones, resultados y autorización para compartir información.
 - **IA coordinadora:** traduce requerimientos en tareas, genera prompts versionados, identifica bloqueos, consolida hallazgos; mantiene PROJECT_STATE.md y ADR.

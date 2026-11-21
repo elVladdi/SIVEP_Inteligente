@@ -1,6 +1,6 @@
 # Protocolo de enrutamiento bidireccional entre IA — v1
 
-**Estado:** aprobado por el responsable, 2026-11-21. Ver ADR-0007 e issue #7.
+**Estado:** aprobado por el responsable, 2026-11-21. Ver ADR-0007 e issue #7. **Solo aplica a IA formalmente activadas**. Durante CONFIGURACIÓN no se generan tareas operativas entre agentes por el mero hecho de discutirlas o editarlas (ADR-0008).
 
 ## Objetivo
 Permitir que **cualquiera** de los tres roles (Coordinación, Desarrollo y Auditoría) **genere prompts para cualquiera de los otros dos**. Cada agente sabe dónde encontrar los prompts dirigidos a su rol, dónde crear encargos a otros agentes y dónde publicar la respuesta completa. No depende de memoria de chat ni del proveedor (Codex, Claude Code, ChatGPT, etc.).

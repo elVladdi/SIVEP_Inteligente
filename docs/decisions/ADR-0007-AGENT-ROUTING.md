@@ -15,3 +15,6 @@
 
 ## Consecuencias
 Los agentes pueden colaborar y pedir correcciones recíprocamente sin depender de la memoria de un chat; las responsabilidades y decisiones humanas conservan sus límites. El índice requiere mantenimiento verificable y permisos de GitHub. El repositorio público no almacena datos reales o restringidos de SIVEP/DAM.
+
+## Aclaración de alcance (ADR-0008)
+Este ADR define el funcionamiento de **agentes formalmente activados**; no transforma retrospectivamente conversaciones de configuración en sesiones operativas. En configuración el asistente responde en el chat, sin la obligación de enviar solo un enlace o registrar cada turno como respuesta de agente. La activación exige orden humana expresa de leer y **ejecutar** el rol.

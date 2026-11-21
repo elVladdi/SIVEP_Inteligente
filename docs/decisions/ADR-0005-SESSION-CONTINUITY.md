@@ -18,3 +18,6 @@ Los chats de IA pueden alcanzar límites de contexto; los proveedores y modelos 
 
 ## Consecuencias
 Continúa en el mismo modelo o distinto proveedor con las mismas fuentes versionadas, aunque el chat previo no esté disponible. La fidelidad depende de la calidad y actualidad de registros; las interrupciones inesperadas pueden producir pérdida parcial no recuperable.
+
+## Aclaración de alcance (ADR-0008)
+Este ADR define el funcionamiento de **agentes formalmente activados**; no transforma retrospectivamente conversaciones de configuración en sesiones operativas. En configuración el asistente responde en el chat, sin la obligación de enviar solo un enlace o registrar cada turno como respuesta de agente. La activación exige orden humana expresa de leer y **ejecutar** el rol.
