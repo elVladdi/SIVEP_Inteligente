@@ -5,7 +5,7 @@ Recuperar una tarea en otro chat del **mismo modelo y proyecto**, o en otro mode
 
 ## INICIO vs CONTINUACIÓN
 - **INICIO:** no hay sesión/tarea que recuperar. Leer archivos canónicos y obtener o proponer asignación de issue sin ejecutar tareas no autorizadas.
-- **CONTINUACIÓN:** el usuario pide retomar, hay cierre por límite de contexto, existe relevo o una tarea fue pausada. Usar el mismo primer prompt de rol, localizar último checkpoint de la sesión/tarea y cotejar evidencia con repositorio.
+- **CONTINUACIÓN:** el usuario pide retomar, hay cierre por límite de contexto, existe relevo o una tarea fue pausada. Proporcionar la misma ruta del prompt de rol para que la IA lo lea (sin copiarlo), localizar último checkpoint de la sesión/tarea y cotejar evidencia con repositorio.
 - Si hay varios candidatos igualmente plausibles, exponer opciones y pedir que se identifique uno; no seleccionar arbitrariamente. Un rol en otro modelo es legítimo si la asignación humana lo confirma.
 
 ## Fuentes, con responsabilidades distintas
@@ -31,7 +31,7 @@ Recuperar una tarea en otro chat del **mismo modelo y proyecto**, o en otro mode
 - Como mínimo, al terminar una sesión de trabajo que produjo avance. Registrar una sesión sin avances solo cuando aporte una decisión o un estado relevante.
 
 ## Arranque CONTINUACIÓN (pasos verificables)
-1. Leer el prompt de rol del repositorio y declarar **CONTINUACIÓN**.
+1. Abrir y leer el prompt de rol mediante su ruta/URL verificada y declarar **CONTINUACIÓN**.
 2. Leer `SESSION_INDEX.md`: resolver sesión por ID/issue explícito, o buscar último checkpoint pertinente al rol y tarea. No confundir sesiones paralelas.
 3. Leer checkpoint y los ADR/issue/PR/handoff/logs referenciados; recuperar criterio aprobado y razonamiento **explícito** (nunca cadena privada).
 4. Comprobar `main`, rama, HEAD SHA, diffs y últimas pruebas. Si hubo trabajo posterior al checkpoint, actualizar diagnóstico en lugar de ejecutar instrucciones obsoletas.
@@ -46,3 +46,6 @@ Recuperar una tarea en otro chat del **mismo modelo y proyecto**, o en otro mode
 
 ## Privacidad y acceso
 Repositorio público: sin DAM/SIVEP reales, información institucional confidencial o secretos. Checkpoints de tareas restringidas contendrán solo metadatos publicables y referencia de custodia autorizada. Sin acceso a GitHub: pedir paquete mínimo de continuidad; **no declarar** recuperación exacta ni lectura inexistente.
+
+## Entrada y salida de chat nuevo
+El mensaje inicial proporciona **la ruta/URL** del mismo prompt, no su texto. El agente documenta la respuesta completa y el prompt en `docs/ai-logs/`, publica, verifica y **solo devuelve su enlace** en chat. Ver ADR-0006 y `docs/operations/OUTPUT_PROTOCOL.md`.

@@ -1,7 +1,7 @@
 # Instrucciones compartidas para IA y colaboradores
 
 ## Inicio por rol y continuidad entre plataformas
-- Usar como primer prompt `prompts/COORDINATOR.md`, `prompts/DEVELOPER.md` o `prompts/AUDITOR.md`. El rol lo decide el prompt/encargo, **nunca la marca o plataforma**.
+- Dar como entrada **solo la ruta/URL** de `prompts/COORDINATOR.md`, `prompts/DEVELOPER.md` o `prompts/AUDITOR.md`. La IA abre el archivo: el usuario no copia su contenido al chat. El rol lo decide el prompt/encargo, **nunca la marca o plataforma**.
 - Verificar el SHA actual de `main`, issues/PR y `docs/operations/ACTIVE_WORK.md` antes de trabajar.
 - Para una tarea en curso, consultar y verificar `docs/operations/handoffs/ISSUE-<numero>.md`, de acuerdo con `docs/operations/HANDOFF_PROTOCOL.md`.
 - Sin lectura real de GitHub no afirmar acceso ni progreso; solicitar paquete documental y señalar incertidumbre.
@@ -12,6 +12,12 @@
 - **CONTINUACIÓN:** ante cambio de chat, límite de contexto, relevo de proveedor o tarea pausada, leer `docs/operations/SESSION_INDEX.md` y checkpoint pertinente de `docs/operations/checkpoints/` además de issue, PR, handoff y ADR. Preservar criterios aprobados y reanudar la siguiente acción exacta.
 - Guardar checkpoints al cierre de hitos, decisiones y antes de cerrar o cambiar de chat; ver `docs/operations/SESSION_CONTINUITY.md`. Reconocer explícitamente pérdida de contexto no registrado.
 - **Distinguir:** ADR = decisiones; checkpoint = estado/siguiente acción; handoff = relevo por tarea; ai-logs = prompts/respuestas completos visibles.
+
+## Contrato de respuesta pública (ADR-0006)
+- Cada IA debe leer `docs/operations/OUTPUT_PROTOCOL.md`.
+- En `docs/ai-logs/YYYY-MM-DD/<id-unico>.md` debe guardar la respuesta **completa** y el prompt recibido, con ruta y SHA del rol.
+- Solo después de publicar y verificar su existencia, responder en el chat **únicamente con la ubicación de la respuesta completa**; excepto cuando el responsable pida explícitamente otro formato.
+- Sin acceso de escritura: declarar el bloqueo, no inventar URL. Contenido restringido nunca se publica en GitHub público.
 
 ## Lectura inicial obligatoria
 1. README.md y PROJECT_STATE.md.

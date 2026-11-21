@@ -19,11 +19,13 @@ Definir y validar una **metodología de identificación de mercancías idéntica
 
 ## Empezar con cualquier IA (prompts universales)
 
-Para comenzar una sesión nueva o **retomar la misma tarea en otro modelo**, pega el primer prompt completo correspondiente a su rol: [Coordinadora](prompts/COORDINATOR.md), [Desarrolladora](prompts/DEVELOPER.md) o [Auditora](prompts/AUDITOR.md). Consulta la [guía de inicio](prompts/README.md).
+Para comenzar una sesión nueva o **retomar una tarea en otro modelo**, proporciona **solo la ruta/URL** al prompt del rol (sin copiar su texto al chat): [Coordinadora](prompts/COORDINATOR.md), [Desarrolladora](prompts/DEVELOPER.md) o [Auditora](prompts/AUDITOR.md). Consulta la [guía de inicio](prompts/README.md).
 
-Al pasar a otro chat del mismo modelo, usa el **mismo prompt** y selecciona modo **CONTINUACIÓN**. El agente recupera el último [checkpoint de sesión](docs/operations/SESSION_INDEX.md) según el [protocolo](docs/operations/SESSION_CONTINUITY.md); no necesita memoria de los mensajes anteriores si los acuerdos y el progreso quedaron registrados.
+Al pasar a otro chat del mismo modelo, indica **la misma ruta del prompt** y selecciona modo **CONTINUACIÓN**. El agente recupera el último [checkpoint de sesión](docs/operations/SESSION_INDEX.md) según el [protocolo](docs/operations/SESSION_CONTINUITY.md); no necesita memoria de los mensajes anteriores si los acuerdos y el progreso quedaron registrados.
 
 La continuidad está documentada en [trabajo actual](docs/operations/ACTIVE_WORK.md) y [protocolo de traspaso](docs/operations/HANDOFF_PROTOCOL.md); el agente verificará issues, PR, SHA y handoff en GitHub, sin depender del chat anterior.
+
+**Respuesta predeterminada:** el agente deja la respuesta íntegra y la instrucción recibida en [docs/ai-logs](docs/ai-logs/README.md) y en el chat responde **solo con el enlace verificable** a la respuesta. Consulta el [protocolo de entrada/salida](docs/operations/OUTPUT_PROTOCOL.md).
 
 ## Cómo empezar
 

@@ -8,6 +8,7 @@ Actualización inicial: 2026-11-21. Este tablero es un índice; **siempre compro
 |---|---|---|---|
 | [#1](https://github.com/elVladdi/SIVEP_Inteligente/issues/1) | Literatura y normativa | Abierto; por desarrollar | No generado |
 | [#2](https://github.com/elVladdi/SIVEP_Inteligente/issues/2) | Inventario conceptual de campos SIVEP/formato B | Abierto; pendiente de autorizaciones/detalle de datos | No generado |
+| [#6](https://github.com/elVladdi/SIVEP_Inteligente/issues/6) | Entrada por ruta y respuesta completa fuera del chat | En elaboración; PR #4 | Por actualizar |
 | [#5](https://github.com/elVladdi/SIVEP_Inteligente/issues/5) | Continuación INICIO/CONTINUACIÓN y checkpoints | En elaboración; PR #4 | docs/operations/checkpoints/2026-11-21/coordinator-session-001-CP01.md |
 | [#3](https://github.com/elVladdi/SIVEP_Inteligente/issues/3) | Trazabilidad de chats entre plataformas | Abierto; registrador manual existe | No generado |
 

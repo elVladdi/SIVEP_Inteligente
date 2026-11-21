@@ -25,3 +25,6 @@ El primer prompt de cada función está en `prompts/` y es independiente del pro
 
 ## Continuidad al agotar el contexto de un chat
 Todo agente usa INICIO o CONTINUACIÓN, revisa `docs/operations/SESSION_INDEX.md` y guarda puntos de control al completar hitos, decisiones o antes de un relevo, conforme a `docs/operations/SESSION_CONTINUITY.md`. Un mismo modelo en un chat nuevo **no cuenta con acceso garantizado al texto no registrado**. Los checkpoints documentan estado, los logs documentan las conversaciones y los ADR conservan acuerdos aprobados.
+
+## Entrada por ruta y salida documental
+El usuario da la URL/ruta del prompt, sin copiar su contenido. El agente lo lee, verifica SHA, ejecuta la tarea y deposita su respuesta íntegra y prompt recibido en `docs/ai-logs/`. En el chat muestra **solo el enlace publicado** al contenido completo, salvo pedido contrario. Protocolo: `docs/operations/OUTPUT_PROTOCOL.md` y ADR-0006.

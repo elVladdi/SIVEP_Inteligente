@@ -1,21 +1,21 @@
-# Arranque universal para los tres roles de IA
+# Inicio de agentes por ruta y respuestas fuera del chat
 
-**Cada archivo siguiente es el primer prompt completo que debes copiar al iniciar una sesión nueva**, independientemente del proveedor:
+**No copiar los prompts al chat.** Basta compartir la URL/ruta del archivo de rol. La IA debe abrirlo, leer las instrucciones y verificar su SHA antes de ejecutar cualquier tarea.
 
-| Rol | Prompt | Función |
+| Rol | Prompt de arranque | Uso |
 |---|---|---|
-| Coordinadora | [COORDINATOR.md](COORDINATOR.md) | Reconstruye estado, coordina y delega |
-| Desarrollo (Codex, Claude Code, otro) | [DEVELOPER.md](DEVELOPER.md) | Retoma issue/PR, implementa y prueba |
-| Auditoría (Claude, otro) | [AUDITOR.md](AUDITOR.md) | Revisa independencia y evidencias |
+| Coordinación | [COORDINATOR.md](COORDINATOR.md) | Estado, acuerdos, asignaciones |
+| Desarrollo (Codex, Claude Code u otro) | [DEVELOPER.md](DEVELOPER.md) | Código, pruebas y PR |
+| Auditoría | [AUDITOR.md](AUDITOR.md) | Revisión independiente |
 
-**Uso:** (1) abrir una sesión de la IA elegida; (2) copiar el archivo completo como primer prompt o instrucciones de agente; (3) facilitar acceso autorizado al repositorio; (4) indicar el issue/PR si se conoce, sin depender de ello para saber el estado general; (5) registrar prompt y respuesta completos conforme a `docs/ai-logs/README.md`.
+## Ejemplos de mensajes mínimos
 
-El contexto vigente se reconstruye consultando `PROJECT_STATE.md`, `docs/operations/ACTIVE_WORK.md`, ADR, issues, PR y `docs/operations/handoffs/ISSUE-<numero>.md`. **No hay un SHA fijo en los prompts:** la IA debe verificar GitHub en cada inicio. Sin acceso debe solicitar el paquete documental mínimo; nunca simular la lectura.
+- `Lee y ejecuta https://github.com/elVladdi/SIVEP_Inteligente/blob/main/prompts/COORDINATOR.md. Modo INICIO.`
+- `Lee y ejecuta https://github.com/elVladdi/SIVEP_Inteligente/blob/main/prompts/DEVELOPER.md. Modo CONTINUACIÓN; issue #N.`
+- `Lee y ejecuta https://github.com/elVladdi/SIVEP_Inteligente/blob/main/prompts/AUDITOR.md. Audita PR #N.`
 
-**Ejemplo de traspaso:** Codex termina un trabajo en el issue #N, entrega commit/PR y handoff. Claude Code comienza con exactamente `DEVELOPER.md`, comprueba el issue y el SHA, revisa el handoff y continúa solo lo pendiente. Los logs permiten auditar lo ocurrido antes y después.
-## Dos modos, incluso dentro de ChatGPT
-**INICIO:** abrir tarea nueva. **CONTINUACIÓN:** un chat se agotó, se abrió otro chat del mismo proyecto, cambió el modelo o quedó una tarea pausada. En ambos casos se usa **el mismo prompt completo del rol**; este identifica el modo, lee `docs/operations/SESSION_INDEX.md`, recupera el checkpoint y verifica SHA/ADR/issue/PR antes de actuar.
+**Hasta fusionar el PR #4**, utiliza la rama `docs/agent-bootstrap-and-handoffs` en lugar de `main`.
 
-Para un chat agotado, indica en el nuevo chat: **"Modo CONTINUACIÓN; retoma la sesión/tarea [ID o issue si se conoce] desde el último checkpoint"**. Si no conoces el ID, el agente buscará el más reciente pertinente y confirmará posibles ambigüedades.
+**Salida por defecto:** cada IA deja el prompt recibido (incluida ruta/URL), la versión SHA del prompt de rol consultado y su **respuesta sustantiva completa** en `docs/ai-logs/YYYY-MM-DD/<id-unico>.md`. Tras comprobar que el archivo está publicado, en el chat devuelve **solo la URL verificada** a `#respuesta-completa-visible`. El usuario puede pedir explícitamente otra forma de respuesta. Si no hay permisos de escritura, informar sin inventar enlaces.
 
-El checkpoint es un resumen verificable, **no una copia de todo el chat**; los prompts y respuestas completos siguen en `docs/ai-logs/`. Si una sesión no se guardó, solo se puede reconstruir lo documentado. Véase `docs/operations/SESSION_CONTINUITY.md`.
+Consulta [OUTPUT_PROTOCOL.md](../docs/operations/OUTPUT_PROTOCOL.md), [SESSION_CONTINUITY.md](../docs/operations/SESSION_CONTINUITY.md) y [AGENTS.md](../AGENTS.md). El acceso al repo, issues, PR, checkpoints y ADR permite continuar un chat en otro modelo sin depender de memoria anterior. Nunca publicar datos sensibles en este repositorio público.

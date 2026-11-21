@@ -3,7 +3,7 @@
 **Principio:** la tarea no reside en el historial de ChatGPT, Codex o Claude. Reside en el **issue, rama, commit SHA, PR, decisiones ADR, registros de interacciones y handoff versionado**.
 
 ## Antes de iniciar una sesión
-1. Usar el primer prompt del rol en `prompts/`.
+1. Dar la ruta/URL del primer prompt del rol en `prompts/`; la IA debe abrirlo y verificarlo.
 2. Leer AGENTS.md, PROJECT_STATE.md, ACTIVE_WORK.md y ADR pertinentes.
 3. Verificar en GitHub el SHA de `main`, issue/PR concreto y último commit de la rama.
 4. Leer `docs/operations/handoffs/ISSUE-<numero>.md`, si existe, y contrastarlo con la actividad real. Si está desactualizado, anotarlo.
@@ -22,4 +22,7 @@ En un repo público no escribir datos reales SIVEP/DAM ni secretos. Para una con
 ## Conflictos
 Prevalecen decisiones humanas aprobadas y ADR aplicables para criterios, mientras que el **estado técnico actual** se verifica por commits, PR e issues. La discrepancia exige investigación, no suposición ni modificación silenciosa.
 ## Continuación en un nuevo chat del mismo modelo y proyecto
-El procedimiento es el mismo que al cambiar de herramienta: pegar el **prompt del mismo rol** en el chat nuevo, usar **CONTINUACIÓN**, leer `docs/operations/SESSION_INDEX.md` y el checkpoint pertinente, cotejar con issue/PR/ADR/commit y seguir la acción pendiente. El handoff se crea **por issue**, el checkpoint **por sesión/hito**, y los logs conservan los turnos completos visibles. Véase `docs/operations/SESSION_CONTINUITY.md`.
+El procedimiento es el mismo que al cambiar de herramienta: indicar la **ruta del mismo prompt de rol** en el chat nuevo, usar **CONTINUACIÓN**, leer `docs/operations/SESSION_INDEX.md` y el checkpoint pertinente, cotejar con issue/PR/ADR/commit y seguir la acción pendiente. El handoff se crea **por issue**, el checkpoint **por sesión/hito**, y los logs conservan los turnos completos visibles. Véase `docs/operations/SESSION_CONTINUITY.md`.
+
+## Respuesta de traspaso
+En cada nuevo chat, el agente guarda prompt y respuesta completos en `docs/ai-logs/` y responde **solo con el enlace verificado** a la respuesta, salvo petición expresa. Véase `docs/operations/OUTPUT_PROTOCOL.md`.

@@ -30,6 +30,10 @@ Fecha de actualización: 2026-11-21. Estado: F0, preparación metodológica. No 
 - Issue #5: implementar protocolo y puntos de control; PR #4: integración pendiente de auditoría y fusión.
 - El estado no registrado no puede recuperarse con certeza; la captura de chats externos sigue requiriendo integraciones o exportación manual.
 
+## Política de entrada y salida
+- ADR-0006: el usuario únicamente indica la ruta del prompt. El agente la lee y verifica su versión SHA. La respuesta sustantiva completa se publica en `docs/ai-logs/` y, en el chat, solo se devuelve su enlace verificado (salvo instrucción contraria).
+- [OUTPUT_PROTOCOL.md](docs/operations/OUTPUT_PROTOCOL.md) establece excepciones, seguridad, publicación y el registro de prompts/respuestas. Issue #6, PR #4: implantación documental pendiente de auditoría/fusión.
+
 ## Próximos pasos
 1. Revisión bibliográfica y normativa crítica; matriz de evidencias y límites de aplicación.
 2. Diseño de protocolo de etiquetado de mercancías por expertos.

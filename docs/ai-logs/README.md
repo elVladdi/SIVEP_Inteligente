@@ -34,3 +34,8 @@ El **prompt inicial de rol** en `prompts/` también se documenta como intercambi
 
 ## Relación con checkpoints de sesión
 Un checkpoint en `docs/operations/checkpoints/` resume el estado, acuerdos, evidencias y siguiente acción; **NO sustituye** el registro de cada prompt/respuesta visible. El índice `docs/operations/SESSION_INDEX.md` vincula sesión, último checkpoint, issue y logs. Los archivos se actualizan por PR para preservar el historial. Para chats interrumpidos sin registro, marcar expresamente falta de trazabilidad y no reconstruir texto inexistente.
+
+## Ubicación canónica de la respuesta completa — ADR-0006
+Cada archivo `docs/ai-logs/YYYY-MM-DD/<id-unico>.md` conserva **el mensaje/prompt exacto recibido** (a menudo es solo una URL/ruta), identifica el prompt de rol consultado mediante ruta + SHA y contiene `## Respuesta completa visible` con el resultado sustantivo íntegro. El enlace del chat apunta a `#respuesta-completa-visible`. **No sustituir la respuesta por un resumen ni por la URL de un archivo distinto.**
+
+**Cierre:** escribir → revisar confidencialidad → publicar en rama/PR → comprobar en GitHub → responder **solo con permalink verificado** en chat. Si la publicación falla, informar el bloqueo; si el material es restringido, conservarlo únicamente en entorno autorizado. La instrucción explícita del responsable de responder en chat prevalece. Ver `docs/operations/OUTPUT_PROTOCOL.md`.
