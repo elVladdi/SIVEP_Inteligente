@@ -19,6 +19,13 @@
 - Solo después de publicar y verificar su existencia, responder en el chat **únicamente con la ubicación de la respuesta completa**; excepto cuando el responsable pida explícitamente otro formato.
 - Sin acceso de escritura: declarar el bloqueo, no inventar URL. Contenido restringido nunca se publica en GitHub público.
 
+## Enrutamiento recíproco entre agentes (ADR-0007)
+- Al abrir sesión, revisar `prompts/ROUTING_INDEX.md` y `prompts/inbox/<tu-rol>/` además de las instrucciones de rol y checkpoints.
+- **Cualquier IA** puede generar solicitudes para **otra IA**, incluidas **Auditoría → Coordinación**, **Desarrollo → Auditoría** y las direcciones inversas. Crear el prompt completo usando `prompts/TASK_TEMPLATE.md` y guardarlo en `prompts/inbox/<rol-destino>/`.
+- En el índice consignar origen, destino, issue, estado y enlaces. Solo ejecutar solicitudes **READY** y autorizadas; las **PROPOSED** necesitan revisión humana si amplían alcance o cambian acuerdos.
+- La respuesta íntegra queda en `docs/ai-logs/`, se vincula a la solicitud y se actualiza su estado en el índice. El chat solo muestra el enlace publicado, salvo petición contraria.
+- Un prompt archivado **no activa automáticamente** otro chat o IA. Protocolo completo: `docs/operations/ROUTING_PROTOCOL.md`.
+
 ## Lectura inicial obligatoria
 1. README.md y PROJECT_STATE.md.
 2. docs/decisions/README.md y los ADR pertinentes.

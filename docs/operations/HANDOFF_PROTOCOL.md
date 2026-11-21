@@ -26,3 +26,6 @@ El procedimiento es el mismo que al cambiar de herramienta: indicar la **ruta de
 
 ## Respuesta de traspaso
 En cada nuevo chat, el agente guarda prompt y respuesta completos en `docs/ai-logs/` y responde **solo con el enlace verificado** a la respuesta, salvo petición expresa. Véase `docs/operations/OUTPUT_PROTOCOL.md`.
+
+## Solicitudes interagente al transferir una tarea
+Antes del cambio de sesión, comprobar `prompts/ROUTING_INDEX.md`, enlazar prompts pendientes del buzón propio, respuestas existentes y nuevas solicitudes emitidas a otro rol; incluir las rutas en el handoff. No interpretar una solicitud depositada como ejecutada sin el estado ANSWERED y referencia verificable del resultado. Ver `docs/operations/ROUTING_PROTOCOL.md`.

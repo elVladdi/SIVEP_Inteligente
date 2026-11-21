@@ -27,6 +27,8 @@ La continuidad está documentada en [trabajo actual](docs/operations/ACTIVE_WORK
 
 **Respuesta predeterminada:** el agente deja la respuesta íntegra y la instrucción recibida en [docs/ai-logs](docs/ai-logs/README.md) y en el chat responde **solo con el enlace verificable** a la respuesta. Consulta el [protocolo de entrada/salida](docs/operations/OUTPUT_PROTOCOL.md).
 
+**Prompts entre agentes:** cada IA deposita las instrucciones para otras en el [buzón del rol destinatario](prompts/ROUTING_INDEX.md) y las respuestas completas en [la bitácora](docs/ai-logs/README.md). El flujo es bidireccional (incluye Auditoría → Coordinación), con protocolo en [ROUTING_PROTOCOL.md](docs/operations/ROUTING_PROTOCOL.md).
+
 ## Cómo empezar
 
 - [PROJECT_STATE.md](PROJECT_STATE.md): estado vigente, acuerdos, dudas y tareas siguientes.

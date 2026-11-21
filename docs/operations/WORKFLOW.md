@@ -28,3 +28,6 @@ Todo agente usa INICIO o CONTINUACIÓN, revisa `docs/operations/SESSION_INDEX.md
 
 ## Entrada por ruta y salida documental
 El usuario da la URL/ruta del prompt, sin copiar su contenido. El agente lo lee, verifica SHA, ejecuta la tarea y deposita su respuesta íntegra y prompt recibido en `docs/ai-logs/`. En el chat muestra **solo el enlace publicado** al contenido completo, salvo pedido contrario. Protocolo: `docs/operations/OUTPUT_PROTOCOL.md` y ADR-0006.
+
+## Flujo de solicitudes recíprocas entre roles
+La Coordinación puede pedir implementación o auditoría; Desarrollo puede pedir aclaraciones o revisión; Auditoría puede solicitar correcciones al desarrollador **o acciones adicionales a Coordinación**. La IA emisora guarda el prompt completo en `prompts/inbox/<destinatario>/`, lo indexa en `prompts/ROUTING_INDEX.md` con estado y issue y no asume ejecución automática. La IA receptora verifica permisos y estado READY, responde íntegramente en `docs/ai-logs/` y actualiza el índice. Si el auditor identifica un cambio de alcance o de decisión aprobada, solo propone la acción para validación humana; no se autoautoriza. Ver `docs/operations/ROUTING_PROTOCOL.md` y ADR-0007.

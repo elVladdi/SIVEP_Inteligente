@@ -34,6 +34,12 @@ Fecha de actualización: 2026-11-21. Estado: F0, preparación metodológica. No 
 - ADR-0006: el usuario únicamente indica la ruta del prompt. El agente la lee y verifica su versión SHA. La respuesta sustantiva completa se publica en `docs/ai-logs/` y, en el chat, solo se devuelve su enlace verificado (salvo instrucción contraria).
 - [OUTPUT_PROTOCOL.md](docs/operations/OUTPUT_PROTOCOL.md) establece excepciones, seguridad, publicación y el registro de prompts/respuestas. Issue #6, PR #4: implantación documental pendiente de auditoría/fusión.
 
+## Comunicación bidireccional entre agentes
+- Aprobado ADR-0007: los tres agentes pueden emitir prompts completos para cualquiera de los otros dos según su autorización.
+- **Entrada a cada destinatario:** `prompts/inbox/<rol-destino>/REQ-YYYYMMDD-NNN.md`; índice `prompts/ROUTING_INDEX.md`.
+- **Respuestas completas:** `docs/ai-logs/YYYY-MM-DD/<id-unico>.md`, enlazadas desde el índice.
+- Protocolo `docs/operations/ROUTING_PROTOCOL.md`; issue #7. Guardar un prompt no ejecuta otra IA automáticamente.
+
 ## Próximos pasos
 1. Revisión bibliográfica y normativa crítica; matriz de evidencias y límites de aplicación.
 2. Diseño de protocolo de etiquetado de mercancías por expertos.

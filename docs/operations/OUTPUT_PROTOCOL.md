@@ -20,3 +20,6 @@
 - No reclamar recuperación de chats externos ni sincronización automática si no existe integración comprobada.
 
 El modo CONTINUACIÓN usa también `docs/operations/SESSION_INDEX.md`, checkpoints, ADR e issues/PR; las respuestas siguen el mismo protocolo.
+
+## Respuesta a prompts emitidos por otra IA
+Leer `prompts/ROUTING_INDEX.md` y el archivo de la solicitud en `prompts/inbox/<tu-rol>/`. El registro de respuesta bajo `docs/ai-logs/` debe incluir ID de solicitud, ruta y SHA del prompt de tarea, rol emisor/destino, issue, y todos los resultados visibles. Publicar y comprobar URL, actualizar estado del índice y en chat **solo devolver el enlace**. Si la respuesta identifica trabajo para otro agente, crear además **un nuevo prompt dirigido** y actualizar el índice: no colocar el pedido solamente dentro del texto de la respuesta. Ver `docs/operations/ROUTING_PROTOCOL.md`.
