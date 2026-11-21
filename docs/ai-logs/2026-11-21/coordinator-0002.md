@@ -1,7 +1,10 @@
 # Interacción coordinator-0002 — arranque universal de agentes
 
+> **RECTIFICACIÓN RETROSPECTIVA (ADR-0008, 2026-11-21).** Este archivo con nombre histórico coordinator-0002.md se creó **durante la CONFIGURACIÓN del proyecto**, antes de activar formalmente ninguna IA. **NO** es respuesta de una IA Coordinadora operativa, ni debe usarse para reanudar una sesión de agente. Algunos textos pueden ser reconstrucciones y no constituyen transcripciones literales verificadas. Se conserva la ruta para preservar enlaces y trazabilidad; ver docs/project-setup/README.md.
+
+
 - Fecha UTC: 2026-11-21 (hora exacta no conservada en esta transcripción)
-- Función: coordinator
+- Función histórica erroneamente atribuida: coordinator; etapa válida: CONFIGURACIÓN
 - Proveedor: OpenAI
 - Modelo: GPT-6
 - Tarea: definición de prompts de primer contacto y handoffs

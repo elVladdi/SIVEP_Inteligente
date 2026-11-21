@@ -1,7 +1,10 @@
 # Interacción coordinator-0006 — enrutamiento bidireccional entre agentes
 
+> **RECTIFICACIÓN RETROSPECTIVA (ADR-0008, 2026-11-21).** Este archivo con nombre histórico coordinator-0006.md se creó **durante la CONFIGURACIÓN del proyecto**, antes de activar formalmente ninguna IA. **NO** es respuesta de una IA Coordinadora operativa, ni debe usarse para reanudar una sesión de agente. Algunos textos pueden ser reconstrucciones y no constituyen transcripciones literales verificadas. Se conserva la ruta para preservar enlaces y trazabilidad; ver docs/project-setup/README.md.
+
+
 - Fecha: 2026-11-21 (hora UTC exacta no conservada)
-- Rol: coordinator; proveedor OpenAI; modelo GPT-6
+- Etiqueta histórica (incorrecta): coordinator; proveedor OpenAI; modelo GPT-6; clasificación válida: CONFIGURACIÓN, sin rol de agente activado
 - Issue: #7
 - PR: #4; rama `docs/agent-bootstrap-and-handoffs`
 - Prompt de rol referenciado: `prompts/COORDINATOR.md` (versión de la rama de publicación; el mensaje del usuario fue la instrucción directa, no una activación desde ruta)

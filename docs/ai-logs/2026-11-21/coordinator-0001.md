@@ -1,7 +1,10 @@
 # Interacción coordinator-0001 — adopción de trazabilidad IA
 
+> **RECTIFICACIÓN RETROSPECTIVA (ADR-0008, 2026-11-21).** Este archivo con nombre histórico coordinator-0001.md se creó **durante la CONFIGURACIÓN del proyecto**, antes de activar formalmente ninguna IA. **NO** es respuesta de una IA Coordinadora operativa, ni debe usarse para reanudar una sesión de agente. Algunos textos pueden ser reconstrucciones y no constituyen transcripciones literales verificadas. Se conserva la ruta para preservar enlaces y trazabilidad; ver docs/project-setup/README.md.
+
+
 - Fecha UTC: 2026-11-21 (hora exacta no registrada)
-- Rol: coordinator
+- Etiqueta histórica (incorrecta): coordinator; clasificación válida: CONFIGURACIÓN, sin rol de agente activado
 - Proveedor: OpenAI
 - Modelo: GPT-6
 - Issue/tarea: #3

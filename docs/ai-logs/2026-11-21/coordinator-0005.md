@@ -1,7 +1,10 @@
 # Interacción coordinator-0005 — inicio por ruta y respuesta externa
 
+> **RECTIFICACIÓN RETROSPECTIVA (ADR-0008, 2026-11-21).** Este archivo con nombre histórico coordinator-0005.md se creó **durante la CONFIGURACIÓN del proyecto**, antes de activar formalmente ninguna IA. **NO** es respuesta de una IA Coordinadora operativa, ni debe usarse para reanudar una sesión de agente. Algunos textos pueden ser reconstrucciones y no constituyen transcripciones literales verificadas. Se conserva la ruta para preservar enlaces y trazabilidad; ver docs/project-setup/README.md.
+
+
 - Fecha: 2026-11-21 (hora UTC exacta no conservada)
-- Rol: Coordinación; proveedor OpenAI; modelo GPT-6
+- Etiqueta histórica (incorrecta): Coordinación; proveedor OpenAI; modelo GPT-6; clasificación válida: CONFIGURACIÓN, sin rol de agente activado
 - Issue: #6
 - PR: #4; rama docs/agent-bootstrap-and-handoffs
 - Archivo de rol consultado para esta implementación: `prompts/COORDINATOR.md` en la versión base `2e05d90109b722974e06b51e553507cb6dd5457f` (consulta verificada).
