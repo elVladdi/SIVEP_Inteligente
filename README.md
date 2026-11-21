@@ -17,6 +17,24 @@ Proyecto de investigación y desarrollo para recuperar antecedentes de mercancí
 
 Definir y validar una **metodología de identificación de mercancías idénticas, similares y no comparables** sobre descripciones del formato B de DAM y otros atributos disponibles en SIVEP. El alcance inicial de mercancías y el nivel arancelario (SA 6, NANDINA 8 o nacional 10 dígitos) **aún no se han elegido**.
 
+## Situación actual: CONFIGURACIÓN
+
+**Todavía no se ha activado formalmente ninguna IA.** Este diálogo define y corrige el proyecto. Durante CONFIGURACIÓN se responde **directamente en el chat**, aunque se cambien archivos, issues o ADR de GitHub.
+
+**OPERACIÓN** comienza solo cuando el responsable ordena expresamente **activar un rol, leer y ejecutar su prompt**. Mencionar una URL o pedir una corrección documental no activa el agente. Solo entonces rigen la bitácora de cada interacción, los checkpoints y la salida predeterminada de solo enlace. Ver [protocolo de activación](docs/operations/ACTIVATION_PROTOCOL.md) y [ADR-0008](docs/decisions/ADR-0008-AGENT-ACTIVATION.md).
+
+## Empezar con cualquier IA (prompts universales)
+
+Para comenzar una sesión nueva o **retomar una tarea en otro modelo**, proporciona **solo la ruta/URL** al prompt del rol (sin copiar su texto al chat): [Coordinadora](prompts/COORDINATOR.md), [Desarrolladora](prompts/DEVELOPER.md) o [Auditora](prompts/AUDITOR.md). Consulta la [guía de inicio](prompts/README.md).
+
+Al pasar a otro chat del mismo modelo, indica **la misma ruta del prompt** y selecciona modo **CONTINUACIÓN**. El agente recupera el último [checkpoint de sesión](docs/operations/SESSION_INDEX.md) según el [protocolo](docs/operations/SESSION_CONTINUITY.md); no necesita memoria de los mensajes anteriores si los acuerdos y el progreso quedaron registrados.
+
+La continuidad está documentada en [trabajo actual](docs/operations/ACTIVE_WORK.md) y [protocolo de traspaso](docs/operations/HANDOFF_PROTOCOL.md); el agente verificará issues, PR, SHA y handoff en GitHub, sin depender del chat anterior.
+
+**Solo tras activación formal — respuesta predeterminada:** el agente deja la respuesta íntegra y la instrucción recibida en [docs/ai-logs](docs/ai-logs/README.md) y en el chat responde **solo con el enlace verificable** a la respuesta. Consulta el [protocolo de entrada/salida](docs/operations/OUTPUT_PROTOCOL.md).
+
+**Prompts entre agentes:** cada IA deposita las instrucciones para otras en el [buzón del rol destinatario](prompts/ROUTING_INDEX.md) y las respuestas completas en [la bitácora](docs/ai-logs/README.md). El flujo es bidireccional (incluye Auditoría → Coordinación), con protocolo en [ROUTING_PROTOCOL.md](docs/operations/ROUTING_PROTOCOL.md).
+
 ## Cómo empezar
 
 - [PROJECT_STATE.md](PROJECT_STATE.md): estado vigente, acuerdos, dudas y tareas siguientes.

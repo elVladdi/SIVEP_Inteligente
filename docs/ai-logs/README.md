@@ -1,4 +1,8 @@
-# Bitácora de prompts y respuestas de IA — obligatoria
+# Bitácora de prompts y respuestas de IA formalmente ACTIVADAS
+
+## Alcance y rectificación
+
+La obligación de registrar **cada** prompt y respuesta aplica solo a una IA formalmente activada (ADR-0008). En CONFIGURACIÓN, se pueden documentar acuerdos y cambios mediante ADR/PR/issues sin registrar cada turno como conversación de un agente operativo. Los archivos históricos coordinator-0001 a coordinator-0006 de 2026-11-21 se generaron **antes** de la activación: son notas de configuración, NO entregas de una Coordinadora formal. Algunos textos son reconstrucciones no certificadas como transcripción literal. Ver docs/project-setup/README.md.
 
 ## Política
 **Cada interacción** con IA coordinadora, IA desarrolladora (Codex u otra) o IA auditora (Claude u otra) requiere un registro individual: prompt *completo* + respuesta *completa visible*, incluidos reintentos, correcciones, preguntas de aclaración y respuestas de auditoría.
@@ -29,3 +33,16 @@ Para información restringida: usar --confidentiality restricted --custody-ref <
 
 ## Verificación
 En cada PR revisar que los enlaces a docs/ai-logs/ cubren todas las iteraciones IA de la tarea. Los metadatos ayudan a auditar, pero el repositorio público no constituye almacenamiento autorizado para datos protegidos.
+## Primer prompt de cada agente y cambio de modelo
+El **prompt inicial de rol** en `prompts/` también se documenta como intercambio, con el texto exacto enviado, la versión del archivo y la primera respuesta completa visible. Si se sustituye un desarrollador (Codex por Claude Code, o viceversa), registrar tanto el cierre del agente saliente como la apertura del agente entrante, asociándolos al mismo issue y al handoff. Enlazar la plantilla no reemplaza conservar el prompt efectivamente utilizado.
+
+## Relación con checkpoints de sesión
+Un checkpoint en `docs/operations/checkpoints/` resume el estado, acuerdos, evidencias y siguiente acción; **NO sustituye** el registro de cada prompt/respuesta visible. El índice `docs/operations/SESSION_INDEX.md` vincula sesión, último checkpoint, issue y logs. Los archivos se actualizan por PR para preservar el historial. Para chats interrumpidos sin registro, marcar expresamente falta de trazabilidad y no reconstruir texto inexistente.
+
+## Ubicación canónica de la respuesta completa — ADR-0006
+Cada archivo `docs/ai-logs/YYYY-MM-DD/<id-unico>.md` conserva **el mensaje/prompt exacto recibido** (a menudo es solo una URL/ruta), identifica el prompt de rol consultado mediante ruta + SHA y contiene `## Respuesta completa visible` con el resultado sustantivo íntegro. El enlace del chat apunta a `#respuesta-completa-visible`. **No sustituir la respuesta por un resumen ni por la URL de un archivo distinto.**
+
+**Cierre:** escribir → revisar confidencialidad → publicar en rama/PR → comprobar en GitHub → responder **solo con permalink verificado** en chat. Si la publicación falla, informar el bloqueo; si el material es restringido, conservarlo únicamente en entorno autorizado. La instrucción explícita del responsable de responder en chat prevalece. Ver `docs/operations/OUTPUT_PROTOCOL.md`.
+
+## Respuestas a tareas originadas por otra IA
+Además de la instrucción recibida en el chat, todo registro de respuesta de una solicitud interagente debe enlazar **ruta + SHA** del prompt completo en `prompts/inbox/<rol-destino>/REQ-YYYYMMDD-NNN.md`, el **ID de solicitud**, el rol emisor y receptor, y la respuesta sustantiva completa. Registrar ese enlace y el estado ANSWERED/BLOCKED en `prompts/ROUTING_INDEX.md` solo tras verificar el archivo publicado. La respuesta puede originar un nuevo prompt para otra IA, pero **debe depositarlo como archivo separado** y registrarlo en el índice; no usar el chat como canal de encargos. Véase `docs/operations/ROUTING_PROTOCOL.md`.
