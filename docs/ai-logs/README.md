@@ -1,0 +1,31 @@
+# Bitácora de prompts y respuestas de IA — obligatoria
+
+## Política
+**Cada interacción** con IA coordinadora, IA desarrolladora (Codex u otra) o IA auditora (Claude u otra) requiere un registro individual: prompt *completo* + respuesta *completa visible*, incluidos reintentos, correcciones, preguntas de aclaración y respuestas de auditoría.
+
+No basta pegar el prompt inicial, un resumen de la respuesta o enlazar únicamente el PR. Cada iteración crea un registro nuevo, vinculado a su issue y al intercambio anterior. Es posible crear una serie de varios turnos conservando el orden.
+
+## Estructura
+docs/ai-logs/YYYY-MM-DD/<fecha-utc>_<id>.md. Campos:
+- ID único, fecha UTC, función, proveedor, modelo (si se conoce), registrado por.
+- Issue o tarea; rama/commit base, referencias previas.
+- Clasificación **PUBLICABLE** o **RESTRINGIDO**.
+- Prompt completo y respuesta completa visible si es publicable.
+- Para restringidos: solo metadata no sensible y referencia opaca a custodia institucional autorizada; el original permanece íntegro fuera del repositorio público.
+- Archivos generados, commit/PR, pruebas y revisión humana; marcar no disponible, no inventar.
+
+## Registro manual asistido
+Exportar/copy-paste la entrada y salida de cada IA en archivos UTF-8 locales que no se suben a GitHub y ejecutar:
+python scripts/record_ai_interaction.py --role developer --provider OpenAI --model Codex --issue ISSUE-001 --prompt-file /ruta/entrada.txt --response-file /ruta/salida.txt --recorded-by colaborador --confirm-public-safe
+
+Para información restringida: usar --confidentiality restricted --custody-ref <identificador-institucional> y **NO** --confirm-public-safe; nunca subir el original. El script crea un registro de metadatos.
+
+## Límites y garantías
+- Esta herramienta no tiene acceso automático al historial de ChatGPT, Codex o Claude.
+- No se exige ni se puede registrar razonamiento interno privado del modelo, instrucciones no visibles, ni acciones no documentadas.
+- Quien registra confirma que examinó la información para publicación. La revisión manual de privacidad es indispensable.
+- Si una plataforma no facilita la exportación completa, registrar la limitación y solicitar el contenido visible, sin afirmar falsamente cumplimiento total.
+- Los registros anteriores al establecimiento de esta política deben identificarse como backfill y marcar cualquier falta de contenido.
+
+## Verificación
+En cada PR revisar que los enlaces a docs/ai-logs/ cubren todas las iteraciones IA de la tarea. Los metadatos ayudan a auditar, pero el repositorio público no constituye almacenamiento autorizado para datos protegidos.

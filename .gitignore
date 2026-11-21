@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+# Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+# Restricted data and generated outputs
+data/
+datasets/
+exports/
+extracts/
+private/
+secrets/
+models/
+artifacts/
+*.db
+*.sqlite
+*.sqlite3
+*.parquet
+*.feather
+*.xlsx
+*.xls
+*.csv
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.onnx
+.DS_Store
+.ipynb_checkpoints/

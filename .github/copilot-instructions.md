@@ -1,0 +1,1 @@
+Antes de generar código consultar AGENTS.md y PROJECT_STATE.md. Registrar toda instrucción y respuesta visible de la herramienta IA según docs/ai-logs/README.md, respetando reglas de privacidad. Código, pruebas y documentación por PR. No incluir datos reales SIVEP/DAM.
