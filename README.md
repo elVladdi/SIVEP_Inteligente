@@ -23,6 +23,8 @@ Definir y validar una **metodología de identificación de mercancías idéntica
 - [AGENTS.md](AGENTS.md): instrucciones comunes para agentes de IA y colaboradores.
 - [docs/PROJECT_CHARTER.md](docs/PROJECT_CHARTER.md): alcance, objetivos y restricciones.
 - [docs/operations/WORKFLOW.md](docs/operations/WORKFLOW.md): coordinación de IA, auditoría y cambios.
+- [docs/ai-logs/README.md](docs/ai-logs/README.md): bitácora obligatoria de todos los prompts y respuestas visibles de las tres IA.
+- [docs/ai-logs/2026-11-21/coordinator-0001.md](docs/ai-logs/2026-11-21/coordinator-0001.md): primera interacción documentada.
 - [docs/decisions/README.md](docs/decisions/README.md): registro de decisiones (ADR).
 - [docs/roadmap/ROADMAP.md](docs/roadmap/ROADMAP.md): fases y criterios de aceptación.
 - [CONTRIBUTING.md](CONTRIBUTING.md) y [SECURITY.md](SECURITY.md): colaboración y protección de información.
