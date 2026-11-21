@@ -1,4 +1,8 @@
-# Bitácora de prompts y respuestas de IA — obligatoria
+# Bitácora de prompts y respuestas de IA formalmente ACTIVADAS
+
+## Alcance y rectificación
+
+La obligación de registrar **cada** prompt y respuesta aplica solo a una IA formalmente activada (ADR-0008). En CONFIGURACIÓN, se pueden documentar acuerdos y cambios mediante ADR/PR/issues sin registrar cada turno como conversación de un agente operativo. Los archivos históricos coordinator-0001 a coordinator-0006 de 2026-11-21 se generaron **antes** de la activación: son notas de configuración, NO entregas de una Coordinadora formal. Algunos textos son reconstrucciones no certificadas como transcripción literal. Ver docs/project-setup/README.md.
 
 ## Política
 **Cada interacción** con IA coordinadora, IA desarrolladora (Codex u otra) o IA auditora (Claude u otra) requiere un registro individual: prompt *completo* + respuesta *completa visible*, incluidos reintentos, correcciones, preguntas de aclaración y respuestas de auditoría.

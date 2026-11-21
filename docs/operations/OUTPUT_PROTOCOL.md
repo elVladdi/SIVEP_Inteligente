@@ -1,6 +1,10 @@
 # Entrada por ruta y respuesta documentada — Protocolo v1
 
-**Aprobado:** 2026-11-21, ADR-0006. Aplica a Coordinación, Desarrollo y Auditoría, en INICIO o CONTINUACIÓN.
+**Aprobado:** 2026-11-21, ADR-0006; su alcance fue precisado en ADR-0008. **SOLO aplica tras activación explícita de la IA**. No aplica a las conversaciones de CONFIGURACIÓN del sistema, que reciben respuesta directamente en chat.
+
+## Condición previa
+
+Antes de usar este protocolo, comprobar orden humana explícita de **activar el rol y leer/ejecutar el prompt**. Mencionar la ruta, diseñar o corregir los prompts o pedir cambios en GitHub no constituyen activación. En CONFIGURACIÓN no hay obligación de publicar respuestas externas ni de responder exclusivamente mediante enlaces. Ver docs/operations/ACTIVATION_PROTOCOL.md.
 
 ## Entrada (sin copiar prompts)
 1. El usuario indica la **ruta/URL del archivo de rol** y opcionalmente modo, issue/PR o sesión. No pega su contenido.

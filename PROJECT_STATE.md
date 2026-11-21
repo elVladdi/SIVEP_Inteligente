@@ -2,6 +2,12 @@
 
 Fecha de actualización: 2026-11-21. Estado: F0, preparación metodológica. No hay modelo ni acceso operativo implementado.
 
+## Situación de activación de agentes
+
+**CONFIGURACIÓN.** Ninguna IA Coordinadora, Desarrolladora ni Auditora ha sido activada aún. Esta conversación es diseño/configuración del proyecto: se responde directamente en chat, sin aplicar el contrato de respuesta por URL o registrar cada turno como conversación operativa. Se documentan decisiones y cambios en ADR/issues/PR.
+
+**OPERACIÓN** requerirá que el responsable solicite de forma explícita activar el rol y leer/ejecutar el prompt correspondiente. ADR-0008 y docs/operations/ACTIVATION_PROTOCOL.md regulan el inicio. Los registros históricos coordinator-0001 a coordinator-0006 se reclasifican como configuración.
+
 ## Decisiones vigentes
 - SIVEP es la fuente histórica prevista; se espera trabajar con datos del formato B de las DAM peruanas.
 - El sistema ofrece referencias y alertas al especialista, quien conserva la decisión final.

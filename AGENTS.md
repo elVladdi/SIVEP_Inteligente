@@ -1,3 +1,13 @@
+## Condición de activación formal (ADR-0008)
+
+Este archivo describe un agente, pero **leer, mencionar o editar su ruta NO activa el rol**. Antes de ejecutar cualquier regla operativa, debe existir una **orden expresa del responsable humano de activar el rol y leer y ejecutar su prompt**.
+
+**CONFIGURACIÓN (predeterminado):** conversar sobre requisitos, arquitectura, edición de GitHub, diseño de agentes o revisión de instrucciones no implica ejercer como Coordinación, Desarrollo ni Auditoría. Responder normalmente en el chat. Documentar cambios mediante commits, issues y ADR cuando corresponda, pero **no** guardar cada respuesta en la bitácora operativa, no crear una sesión formal y no limitar el chat a un enlace.
+
+**OPERACIÓN:** empieza únicamente después de la orden explícita de activación; entonces aplicar INICIO/CONTINUACIÓN, prompts/respuestas registrados, checkpoints, comunicación entre agentes y respuesta en chat solamente con enlace a la respuesta publicada, salvo instrucción distinta del responsable.
+
+La ruta del prompt puede compartirse para revisión sin activarlo. Si el estado es ambiguo, mantener CONFIGURACIÓN y no presumir activación retrospectiva. Ver docs/operations/ACTIVATION_PROTOCOL.md.
+
 # Instrucciones compartidas para IA y colaboradores
 
 ## Inicio por rol y continuidad entre plataformas
@@ -13,7 +23,7 @@
 - Guardar checkpoints al cierre de hitos, decisiones y antes de cerrar o cambiar de chat; ver `docs/operations/SESSION_CONTINUITY.md`. Reconocer explícitamente pérdida de contexto no registrado.
 - **Distinguir:** ADR = decisiones; checkpoint = estado/siguiente acción; handoff = relevo por tarea; ai-logs = prompts/respuestas completos visibles.
 
-## Contrato de respuesta pública (ADR-0006)
+## Contrato de respuesta pública SOLO EN OPERACIÓN (ADR-0006)
 - Cada IA debe leer `docs/operations/OUTPUT_PROTOCOL.md`.
 - En `docs/ai-logs/YYYY-MM-DD/<id-unico>.md` debe guardar la respuesta **completa** y el prompt recibido, con ruta y SHA del rol.
 - Solo después de publicar y verificar su existencia, responder en el chat **únicamente con la ubicación de la respuesta completa**; excepto cuando el responsable pida explícitamente otro formato.
@@ -41,8 +51,8 @@
 - Verificar precedencia temporal en simulaciones retrospectivas.
 - No inventar resultados de pruebas, campos de SIVEP, evidencias o referencias.
 
-## Registro OBLIGATORIO de intercambios de IA
-- Toda instrucción enviada a IA coordinadora, desarrolladora o auditora, **y su respuesta completa visible**, debe conservarse en docs/ai-logs/ mediante el protocolo indicado.
+## Registro OBLIGATORIO de intercambios de agentes activados
+- **Solo después de la activación formal:** toda instrucción enviada a IA coordinadora, desarrolladora o auditora, **y su respuesta completa visible**, debe conservarse en docs/ai-logs/ mediante el protocolo indicado.
 - Incluir función, sistema/proveedor/modelo si se conoce, fecha UTC, autor, issue, commit/versión base, artefactos y estado de revisión.
 - Registrar iteraciones, correcciones y auditorías, no solo el prompt final ni el resumen.
 - En el repositorio público solo se guardan contenidos aptos para publicación. Intercambios confidenciales: registrar metadata y referencia al archivo íntegro en depósito institucional autorizado, nunca datos restringidos.
