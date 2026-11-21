@@ -20,3 +20,5 @@ Cada respuesta pertenece a un registro de docs/ai-logs/ con identificador, rol, 
 
 ## Puertas de calidad
 Sin fusión si faltan pruebas, falta auditoría exigida, existe fuga de datos, los experimentos no son reproducibles o no están registradas las interacciones IA relevantes. El auditor no sustituye la aprobación humana.
+## Arranque y sustitución de agente
+El primer prompt de cada función está en `prompts/` y es independiente del proveedor. Todo nuevo agente reconstruye el contexto de `PROJECT_STATE.md`, `ACTIVE_WORK.md`, ADR, issue/PR y último handoff. El agente saliente debe registrar pruebas, SHA, pendientes y las rutas de las conversaciones; véase `docs/operations/HANDOFF_PROTOCOL.md`. Los handoffs no sustituyen la auditoría ni aprobación humana.

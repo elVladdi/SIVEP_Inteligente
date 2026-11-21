@@ -17,6 +17,12 @@ Proyecto de investigación y desarrollo para recuperar antecedentes de mercancí
 
 Definir y validar una **metodología de identificación de mercancías idénticas, similares y no comparables** sobre descripciones del formato B de DAM y otros atributos disponibles en SIVEP. El alcance inicial de mercancías y el nivel arancelario (SA 6, NANDINA 8 o nacional 10 dígitos) **aún no se han elegido**.
 
+## Empezar con cualquier IA (prompts universales)
+
+Para comenzar una sesión nueva o **retomar la misma tarea en otro modelo**, pega el primer prompt completo correspondiente a su rol: [Coordinadora](prompts/COORDINATOR.md), [Desarrolladora](prompts/DEVELOPER.md) o [Auditora](prompts/AUDITOR.md). Consulta la [guía de inicio](prompts/README.md).
+
+La continuidad está documentada en [trabajo actual](docs/operations/ACTIVE_WORK.md) y [protocolo de traspaso](docs/operations/HANDOFF_PROTOCOL.md); el agente verificará issues, PR, SHA y handoff en GitHub, sin depender del chat anterior.
+
 ## Cómo empezar
 
 - [PROJECT_STATE.md](PROJECT_STATE.md): estado vigente, acuerdos, dudas y tareas siguientes.

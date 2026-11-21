@@ -1,5 +1,12 @@
 # Instrucciones compartidas para IA y colaboradores
 
+## Inicio por rol y continuidad entre plataformas
+- Usar como primer prompt `prompts/COORDINATOR.md`, `prompts/DEVELOPER.md` o `prompts/AUDITOR.md`. El rol lo decide el prompt/encargo, **nunca la marca o plataforma**.
+- Verificar el SHA actual de `main`, issues/PR y `docs/operations/ACTIVE_WORK.md` antes de trabajar.
+- Para una tarea en curso, consultar y verificar `docs/operations/handoffs/ISSUE-<numero>.md`, de acuerdo con `docs/operations/HANDOFF_PROTOCOL.md`.
+- Sin lectura real de GitHub no afirmar acceso ni progreso; solicitar paquete documental y señalar incertidumbre.
+- La carga de `CLAUDE.md` por Claude Code no asigna automáticamente un rol de auditor. Claude Code puede implementar código si recibe el prompt de Desarrollo.
+
 ## Lectura inicial obligatoria
 1. README.md y PROJECT_STATE.md.
 2. docs/decisions/README.md y los ADR pertinentes.

@@ -18,6 +18,12 @@ Fecha de actualización: 2026-11-21. Estado: F0, preparación metodológica. No 
 - Estrategia de despliegue, licencia, responsables y controles de seguridad.
 - Mecanismo de captura automática de prompts y respuestas en las plataformas externas, sujeto a sus capacidades y permisos.
 
+## Inicio y continuidad multi-IA
+- [prompts/README.md](prompts/README.md): prompts iniciales portables para coordinadora, desarrolladora y auditora.
+- [docs/operations/ACTIVE_WORK.md](docs/operations/ACTIVE_WORK.md): tareas abiertas y asignaciones cuando existan; contrastar con GitHub.
+- [docs/operations/HANDOFF_PROTOCOL.md](docs/operations/HANDOFF_PROTOCOL.md): relevo por issue, rama, SHA, PR, pruebas, pendientes y logs.
+- Issues iniciales: #1 (literatura), #2 (inventario conceptual) y #3 (toma de registros IA); sin asignación exclusiva de implementación confirmada.
+
 ## Próximos pasos
 1. Revisión bibliográfica y normativa crítica; matriz de evidencias y límites de aplicación.
 2. Diseño de protocolo de etiquetado de mercancías por expertos.
