@@ -59,6 +59,19 @@ class LiteratureReviewTest(unittest.TestCase):
                 )
                 self.assertIn("SIVEP", text)
 
+    def test_reproducibility_matrix_covers_each_study(self):
+        index = (LIT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("## 7. Reproducibilidad y disponibilidad de materiales", index)
+        self.assertIn("## 8. Referencias bibliográficas", index)
+        section = index.split(
+            "## 7. Reproducibilidad y disponibilidad de materiales", 1
+        )[1].split("## 8. Referencias bibliográficas", 1)[0]
+        rows = re.findall(r"^\\| \\*\\*(\\d+)\\*\\* \\|.+$", section, flags=re.MULTILINE)
+        self.assertEqual([int(i) for i in rows], list(range(1, 16)))
+        for term in ("Alta, condicionada", "Parcial", "Baja / no verificable", "No aplicable"):
+            self.assertIn(term, section)
+        self.assertIn("No se ha ejecutado ninguno", section)
+
     def test_internal_markdown_links_resolve(self):
         for path in [LIT / "README.md", *[LIT / x for x in EXPECTED]]:
             content = path.read_text(encoding="utf-8")
