@@ -19,7 +19,7 @@ Definir y validar una **metodología de identificación de mercancías idéntica
 
 ## Revisión de literatura
 
-- **[Revisión de ocho artículos: índice, síntesis y matrices comparativas](docs/literature/README.md)**. Incluye fichas ampliadas individuales (artículos 1–8), metodología publicada, resultados, limitaciones y aportes experimentales posibles a SIVEP.
+- **[Revisión de quince trabajos: síntesis y matrices comparativas](docs/literature/README.md)**. Incluye fichas ampliadas individuales (trabajos 1–15), metodología publicada, resultados, limitaciones y aportaciones científicas a la investigación de SIVEP.
 - La revisión documenta antecedentes de gestión de riesgo, recuperación de mercancías, estimación de valor y marco jurídico; **no implica elección de modelo definitivo**.
 
 ## Cómo empezar
