@@ -38,7 +38,9 @@ class LiteratureReviewTest(unittest.TestCase):
         for name in EXPECTED:
             self.assertIn(name, index)
         self.assertIn("Cuadro comparativo general", index)
-        self.assertIn("Cuadro de aportación", index)
+        self.assertIn("Cuadro de contribuciones científicas", index)
+        self.assertNotIn("SIVEP", index)
+        self.assertNotIn("decisiones de implementación", index)
         self.assertIn("quince", index.lower())
         for number in range(1, 16):
             self.assertIn(f"### 2.{number}.", index)
