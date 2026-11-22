@@ -66,7 +66,7 @@ class LiteratureReviewTest(unittest.TestCase):
         section = index.split(
             "## 7. Reproducibilidad y disponibilidad de materiales", 1
         )[1].split("## 8. Referencias bibliográficas", 1)[0]
-        rows = re.findall(r"^\\| \\*\\*(\\d+)\\*\\* \\|.+$", section, flags=re.MULTILINE)
+        rows = re.findall(r"^\| \*\*(\d+)\*\* \|.+$", section, flags=re.MULTILINE)
         self.assertEqual([int(i) for i in rows], list(range(1, 16)))
         for term in ("Alta, condicionada", "Parcial", "Baja / no verificable", "No aplicable"):
             self.assertIn(term, section)
