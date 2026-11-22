@@ -19,6 +19,13 @@ EXPECTED = [
     "06-bayona-2025-transposicion-hs.md",
     "07-kim-kim-choi-2025-the-rag.md",
     "08-outram-swartz-2026-fronteras.md",
+    "09-brinkmann-baumann-bizer-2024-wdc-pave.md",
+    "10-brinkmann-shraga-bizer-2024-extractgpt.md",
+    "11-lee-et-al-2024-explainable-customs.md",
+    "12-lee-et-al-2021-sentences-retrieval.md",
+    "13-ravi-et-al-text2trade-mnrl-mcd.md",
+    "14-pain-2021-clasificacion-transfer-learning.md",
+    "15-yang-et-al-2025-hscodecomp.md",
 ]
 
 
@@ -32,6 +39,11 @@ class LiteratureReviewTest(unittest.TestCase):
             self.assertIn(name, index)
         self.assertIn("Cuadro comparativo general", index)
         self.assertIn("Cuadro de aportación", index)
+        self.assertIn("quince", index.lower())
+        for number in range(1, 16):
+            self.assertIn(f"### 2.{number}.", index)
+            self.assertIn(f"| **{number}** |", index)
+            self.assertIn(f"| {number} |", index)
         root = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertIn("docs/literature/README.md", root)
 
@@ -41,7 +53,7 @@ class LiteratureReviewTest(unittest.TestCase):
                 text = (LIT / name).read_text(encoding="utf-8")
                 self.assertGreater(len(text.split()), 650)
                 self.assertIn("## ", text)
-                self.assertTrue("DOI" in text or "WTO Staff Working Paper" in text)
+                self.assertTrue(any(v in text.lower() for v in ("doi", "arxiv", "working paper", "manuscrito", "tesis")), f"Falta tipo o referencia bibliográfica en {name}")
                 self.assertTrue(
                     any(word in text.lower() for word in ("limitaciones", "límites", "validez"))
                 )
