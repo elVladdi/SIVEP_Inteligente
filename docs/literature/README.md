@@ -276,7 +276,42 @@ Esta afirmación se limita **al corpus de quince textos revisados**; no es una d
 
 Las fichas individuales identifican **qué resulta medido y qué es inferencia de aplicabilidad**. No se incorporan PDF completos, información comercial reservada ni datos aduaneros identificables al repositorio público.
 
-## 7. Referencias bibliográficas y fichas ampliadas
+## 7. Reproducibilidad y disponibilidad de materiales
+
+La reproducibilidad es un atributo de **la evidencia experimental publicada**, no una medida de utilidad para SIVEP. Se distingue entre **repetir los experimentos originales con los mismos materiales**, **reimplementar un procedimiento descrito con otros datos** y **replicar un hallazgo en otro dominio**. Solo la primera operación, bajo condiciones suficientemente equivalentes, permite contrastar directamente las métricas de los autores.
+
+La evaluación que sigue es una **auditoría documental de disponibilidad y suficiencia de materiales**. **No se ha ejecutado ninguno de los quince experimentos** ni se han verificado sus métricas por reproducción independiente. Las etiquetas indican **potencial de reproducibilidad**, no resultados reproducidos.
+
+**Criterios utilizados:**
+
+- **Alta, condicionada:** existe código de los autores, datos o particiones de evaluación y documentación de ejecución; la reproducción exacta depende todavía de versiones de modelos, APIs, entorno y recursos.
+- **Parcial:** se dispone de una descripción suficiente para reimplementar partes del método, o de algunos datos/códigos, pero falta al menos un elemento relevante para repetir **las cifras originales**.
+- **Baja / no verificable:** no se identificó un paquete público suficiente de datos, implementación y configuración para contrastar los resultados originales. Esto **no** implica que el método sea incorrecto.
+- **No aplicable como reproducción computacional:** el trabajo es jurídico o cualitativo y debe valorarse según la trazabilidad de sus fuentes, entrevistas y procedimientos, no por código ejecutable.
+
+| N.º | Estudio | Nivel | Materiales o procedimiento disponibles | Principal límite de reproducción |
+|---|---|---|---|---|
+| **1** | Vijayakumar (2025) | **Baja / no verificable** | Arquitectura conceptual de agrupamiento y detección de riesgo | No se aportan los registros, implementación ni parámetros completos del modelo de valoración. |
+| **2** | Alqaryouti et al. (2024) | **Baja / no verificable** | Algoritmo, ecuaciones y descripción parcial de experimentos | Histórico de Dubái no público; sin muestras/semillas exactas ni parámetros completos de LOF. |
+| **3** | Chan et al. (2023) | **Baja / no verificable** | Descripción de Word2Vec, clasificador y regresión probabilística | No consta un paquete público completo con datos, modelos y ejecución. |
+| **4** | Alwanin et al. (2026) | **Parcial** | [Conjunto sintético y código base de generación/evaluación de datos](https://github.com/Seondong/Customs-Declaration-Datasets); descripción y pseudocódigo de DXGBA | El repositorio de datos pertenece a **otra investigación**: no constituye una implementación íntegra verificada de DXGBA ni sus condiciones finales de entrenamiento. |
+| **5** | Morgero y Macedo da Silva (2025) | **No aplicable (computacional)** | Revisión jurídica, entrevista y cuestionario con respuestas de siete países | La comprobación depende de fuentes normativas y registros primarios cualitativos, no de reproducir métricas de un algoritmo. |
+| **6** | Bayona (2025) | **Parcial (reimplementación)** | Rondas deterministas, correspondencia exacta y comparación TF-IDF/SBERT documentadas | No se identificó paquete íntegro de datos específicos, scripts y decisiones expertas para repetir todas las cifras. |
+| **7** | Kim, Kim y Choi (2025) | **Parcial (reimplementación)** | Arquitectura THE-RAG y medidas de evaluación publicadas | Faltan datos etiquetados, código, particiones y configuración completa de modelos para contrastar sus tasas Top-3. |
+| **8** | Outram y Swartz (2026) | **Baja / no verificable** | Descripción funcional y ejemplos de plataforma integrada | No se publican suficientes datos, algoritmos y protocolos independientes de evaluación del componente de valoración. |
+| **9** | Brinkmann, Baumann y Bizer (2024) | **Alta, condicionada** | [Código, WDC-PAVE procesado, prompts y scripts de ejecución](https://github.com/wbsg-uni-mannheim/wdc-pave) | Replicar cifras con GPT-3.5/GPT-4 históricos exige acceso y condiciones equivalentes de API/modelo. |
+| **10** | Brinkmann, Shraga y Bizer (2024) | **Alta, condicionada** | [Código, OA-Mine/AE-110K procesados, prompts y scripts](https://github.com/wbsg-uni-mannheim/ExtractGPT) | Depende de versiones de GPT/Llama, entorno y capacidad de cómputo; disponibilidad no garantiza igualdad de resultados. |
+| **11** | Lee et al. (2023/2024) | **Parcial (reimplementación)** | Arquitectura y ecuaciones de clasificación y recuperación de evidencia | No se identificó paquete integral de decisiones coreanas, etiquetas de evidencia, particiones y código para confirmar sus resultados. |
+| **12** | Lee et al. (2021) | **Parcial (reimplementación)** | Arquitectura KoELECTRA–AIR, parámetros publicados y contraste con/sin frases | Datos históricos y anotaciones de evidencia no disponibles como paquete experimental completo verificado. |
+| **13** | Ravi et al., Text2Trade | **Parcial (reimplementación)** | Método MNRL/MCD, métricas y fuentes comerciales identificadas | No se confirmó código y particiones originales completos; además, el PDF mantiene metadatos editoriales no definitivos. |
+| **14** | Pain (2021) | **Baja / no verificable** | Procedimiento EDI, modelos y tablas de comparación ampliamente descritos | Datos comerciales confidenciales y definición particular de «precisión de recomendación»; no permite repetir el benchmark original. |
+| **15** | Yang et al. (2025), HSCodeComp | **Alta, condicionada** | [Benchmark, datos de prueba y código de agentes/evaluación](https://github.com/ATH-MaaS/Marco-DeepResearch/tree/main/Marco-DeepResearch-Family/HSCodeComp); [dataset público](https://huggingface.co/datasets/AIDC-AI/HSCodeComp) | La reproducción íntegra requiere versiones de LLM, herramientas, acceso a servicios y recursos multimodales no necesariamente presentes en el conjunto distribuido. |
+
+**Alcance de la clasificación.** Los estudios **9, 10 y 15** presentan el mayor potencial de repetición controlada con materiales públicos; el **4** ofrece datos sintéticos abiertos de una investigación relacionada, no el paquete completo del método evaluado. Los niveles **parcial** o **baja** no implican que no pueda construirse una implementación independiente: implican que **no puede darse por reproducida la métrica original** a partir de los materiales aquí identificados.
+
+La reproducibilidad tampoco equivale a **transferibilidad**. Repetir F1 de extracción en comercio electrónico, Recall@10 de códigos HS o exactitud HS10 no validaría, por sí solo, la identificación de mercancías idénticas o similares en DAM ni la aptitud jurídica de un valor histórico como referencia.
+
+## 8. Referencias bibliográficas y fichas ampliadas
 
 | N.º | Referencia | Texto completo de la revisión | Publicación |
 |---|---|---|---|
