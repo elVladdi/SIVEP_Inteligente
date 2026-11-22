@@ -2,9 +2,9 @@
 
 **Colección analizada:** quince trabajos de 2021–2026 sobre gestión de riesgos, comparación de descripciones comerciales, clasificación arancelaria, anomalías de valor, priorización de controles y fundamentos jurídicos de la valoración aduanera.
 
-**Ámbito de análisis:** investigación bibliográfica vinculada con el problema de identificación de mercancías comparables y uso de antecedentes históricos en **[SIVEP Inteligente](../../README.md)**.
+**Ámbito de análisis:** inteligencia artificial y métodos documentales aplicados a productos, clasificación arancelaria, gestión del riesgo, anomalías de valor, explicabilidad, reproducibilidad y valoración aduanera. Cada investigación se examina desde su objeto original, sin vincular sus conclusiones a una implementación particular.
 
-> **Nota de alcance.** Esta es una revisión crítica y temática de quince fuentes examinadas en texto completo; no es una revisión sistemática ni un metaanálisis. Las contribuciones a SIVEP descritas aquí constituyen **relaciones analíticas entre la literatura y el problema de investigación**, no decisiones de implementación. Cada artículo dispone de una [ficha ampliada](#2-estudios-revisados) con sus datos, metodología, resultados y limitaciones.
+> **Nota de alcance.** Esta es una revisión crítica y temática de quince fuentes examinadas en texto completo; no es una revisión sistemática ni un metaanálisis. Su propósito es **describir y contrastar los hallazgos científicos de las publicaciones**, sus evidencias y sus limitaciones. Cada trabajo dispone de una [ficha ampliada](#2-estudios-revisados).
 
 ## 1. Objeto de la revisión
 
@@ -12,7 +12,7 @@ La revisión examina cómo la literatura especializada aborda siete problemas re
 
 Estos problemas están relacionados, pero no son intercambiables. La **similitud textual** entre dos registros no demuestra necesariamente la **identidad o similitud comercial y jurídica** de sus mercancías. Una **anomalía estadística** tampoco acredita una **subvaloración aduanera**, y una predicción de precio no sustituye un valor histórico cuya procedencia y admisibilidad deban verificarse.
 
-Las publicaciones se examinan a partir de su pregunta de investigación, fuentes de datos, métodos, resultados reportados, limitaciones de validez y contribución al estudio de **referencias históricas de valor en declaraciones aduaneras**. La comparabilidad de sus métricas se analiza en función de la tarea evaluada, no del valor absoluto de los porcentajes.
+Las publicaciones se examinan a partir de su **pregunta de investigación, datos, métodos, resultados, reproducibilidad y limitaciones de validez**. La síntesis distingue las contribuciones propias de cada trabajo y sus relaciones temáticas con los demás, sin convertirlas en propuestas de aplicación. Las métricas se interpretan según la tarea y el protocolo correspondientes.
 
 ## 2. Estudios revisados
 
@@ -168,14 +168,14 @@ Las publicaciones se examinan a partir de su pregunta de investigación, fuentes
 
 ## 3. Cuadro comparativo general de los quince estudios
 
-| N.º | Estudio y ámbito | Pregunta central | Método principal | Base empírica | Resultado comunicado | Limitación para el análisis de mercancías comparables |
+| N.º | Estudio y ámbito | Pregunta central | Método principal | Base empírica | Resultado comunicado | Límite de interpretación o validez |
 |---|---|---|---|---|---|---|
 | **1** | Vijayakumar (2025), India | ¿Cómo localizar operaciones históricas relevantes para riesgo de valoración? | Clustering textual, comunidades, distancias | Experiencia institucional | Modelo conceptual de comparación y alertas | No informa algoritmo específico ni métricas de comparabilidad |
 | **2** | Alqaryouti et al. (2024), Dubái | ¿Qué valores declarados son estadísticamente atípicos? | Distancia euclidiana y LOF en grupos HS | 500 000 declaraciones; pruebas balanceadas | Hasta **86 %** de exactitud | HS común no demuestra mercancía equivalente |
 | **3** | Chan et al. (2023), Hong Kong | ¿Cómo detectar valores anómalos según el producto? | Word2Vec, GCNN y regresión probabilística | Declaraciones; capítulos 71 y 8 | **F1 80,8 %** en valor unitario, cap. 8 | Predicción estadística sin recuperación de antecedentes individuales |
 | **4** | Alwanin et al. (2026) | ¿Cómo priorizar fraude según impacto económico? | DXGBA, remuestreo, SHAP | **54 000 registros sintéticos** | **F1 49,23 %**; **87,98 %** económico al revisar 10 %, en simulación | No compara descripciones ni acredita recuperación fiscal |
 | **5** | Morgero y Macedo da Silva (2025), América Latina | ¿Qué condiciones regulan las verificaciones y referencias de valor? | Revisión normativa, entrevista, encuesta | **7 países**, incluido Perú | Diferencias en confiabilidad y uso de históricos | Evidencia cualitativa, sin algoritmo |
-| **6** | Bayona (2025), OMC | ¿Cómo transponer líneas arancelarias entre versiones del SA? | Reglas, exact match, TF-IDF, SBERT | 7 946 y 9 802 líneas; revisión humana | **99,6 % y 98,8 %** en el proceso completo | La tarea es transposición de nomenclaturas, no matching de DAM |
+| **6** | Bayona (2025), OMC | ¿Cómo transponer líneas arancelarias entre versiones del SA? | Reglas, exact match, TF-IDF, SBERT | 7 946 y 9 802 líneas; revisión humana | **99,6 % y 98,8 %** en el proceso completo | La tarea es transposición de nomenclaturas, no comparación de productos |
 | **7** | Kim, Kim y Choi (2025), Corea | ¿Cómo recomendar códigos HS con recuperación documental? | Dense retrieval, BM25, reranking, LLM | **100 y 1 000** casos oficiales | **Top-3 HS6 49,3 %** en 1 000 casos | Clasificación HS y recuperación de documentos, no de valores |
 | **8** | Outram y Swartz (2026), gestión fronteriza | ¿Cómo integrar riesgo, valor y cadenas de suministro? | Canonicalización, grafos, IA explicable | Demostraciones y despliegues reportados | **40 %** en vía verde, según autores | Falta metodología reproducible del modelo de valoración |
 | **9** | Brinkmann, Baumann y Bizer (2024); ADBIS | ¿Cómo extraer y normalizar características de productos? | LLM, prompting, normalización | 565 productos, 4.687 pares WDC-PAVE | **F1 91,32 %**, extracción y normalización conjunta | No mide identidad/comparabilidad de mercancías |
@@ -186,31 +186,31 @@ Las publicaciones se examinan a partir de su pregunta de investigación, fuentes
 | **14** | Pain (2021); tesis, Canadá | ¿Cómo leer EDI ruidoso y recuperar códigos HS? | Parsing, limpieza, USE/XLM-R y STS | 33.019 transacciones de transportistas | **70,10 % «recomendación@10»** en mejor grupo | Métrica no convencional; limpieza puede perder atributos |
 | **15** | Yang et al. (2025); HSCodeComp | ¿Pueden los agentes aplicar reglas jerárquicas? | Benchmark, LLM/VLM y agentes con búsqueda | 632 productos anotados | **46,83 % exactitud HS10**; humano 95 % reportado | No estima valor ni evalúa identidad de mercancías |
 
-**Interpretación de las métricas.** La exactitud en transposición arancelaria, el F1 de detección de anomalías, la cobertura económica y la exactitud Top-3 de códigos HS **no son métricas comparables entre sí**. Cada una corresponde a una tarea, muestra y criterio de éxito diferentes. Ningún porcentaje de esta tabla mide directamente la precisión de identificar mercancías idénticas o similares en registros SIVEP.
+**Interpretación de las métricas.** La exactitud en transposición arancelaria, el F1 de extracción o detección de anomalías, la cobertura económica, Recall@k y la exactitud Top-3 de códigos HS **no son métricas intercambiables**. Cada cifra corresponde a una tarea, muestra y definición de éxito específicas; ninguna permite establecer una jerarquía general de eficacia entre investigaciones.
 
-## 4. Cuadro de aportación de cada artículo al análisis de SIVEP Inteligente
+## 4. Cuadro de contribuciones científicas de los quince estudios
 
-La aportación se entiende aquí como **conocimiento, evidencia o limitación relevante para el problema de investigación**; no como aprobación de una técnica, requisito de desarrollo o secuencia de implementación.
+La siguiente matriz identifica **qué conocimiento aporta cada publicación dentro de su propio objeto de estudio**, el tipo de evidencia que lo respalda y sus límites. No plantea recomendaciones de implementación ni les atribuye a los autores objetivos ajenos a sus investigaciones.
 
-| N.º | Estudio | Aporte documentado | Relevancia específica para el problema de SIVEP | Alcance de la evidencia |
+| N.º | Estudio | Contribución científica documentada | Evidencia principal | Límite de la contribución |
 |---|---|---|---|---|
-| **1** | Vijayakumar (2025) | Agrupamiento de descripciones y comparación histórica contextualizada | Fundamenta el problema de **identificar operaciones previas con mercancías potencialmente comparables** | Arquitectura conceptual, sin evaluación específica de matching |
-| **2** | Alqaryouti et al. (2024) | Distancias y densidad local para identificar valores atípicos | Evidencia la diferencia entre **pertenecer a una misma categoría HS** y formar un grupo estadísticamente homogéneo | Evaluación de anomalías, no de equivalencia de productos |
-| **3** | Chan et al. (2023) | Modelos de valor condicionados a descripciones comerciales | Fundamenta la importancia de **características particulares de cada mercancía** al interpretar diferencias de precio | Resultados predictivos; no determina referencias legales |
-| **4** | Alwanin et al. (2026) | Clasificación conjunta y ordenación por impacto monetario | Aporta criterios de evaluación de la **utilidad operativa y capacidad de selección de riesgos** | Simulación con datos sintéticos |
-| **5** | Morgero y Macedo da Silva (2025) | Distinción jurídica entre alerta, verificación y utilización de antecedentes | Delimita la **confiabilidad del valor histórico, la duda razonable y el papel del especialista** | Análisis normativo y cualitativo de prácticas latinoamericanas |
-| **6** | Bayona (2025) | Comparación de TF-IDF/SBERT y documentación de errores por semejanza superficial | Aporta fundamentos para **interpretar puntuaciones textuales sin confundirlas con identidad de mercancía** | Experimento de transposición de nomenclaturas |
-| **7** | Kim, Kim y Choi (2025) | Recuperación léxica y semántica combinada con reordenamiento | Aporta una referencia metodológica para la **búsqueda y ordenación de información comercial o normativa relacionada** | Evaluación de clasificación HS, no de comparabilidad para valoración |
-| **8** | Outram y Swartz (2026) | Integración de identificación, contexto comercial, antecedentes y análisis de valores | Documenta una **representación funcional integral** cercana al problema de referencias de valoración | Demostraciones con algoritmos y validación parcialmente no divulgados |
-| **9** | Brinkmann, Baumann y Bizer | Extracción y normalización de atributos con medidas separadas | Evidencia sobre **qué características fueron expresadas y cómo se transforman** | WDC-PAVE; sin emparejamiento de mercancías |
-| **10** | Brinkmann, Shraga y Bizer | Extracción con valores no observados y comparación entre corpus | Relevancia de **marca, modelo y capacidades nuevas** para representar productos | Comercio electrónico; no demuestra identidad comercial |
-| **11** | Lee et al., clasificación explicable | Recuperación de sustento documental y evaluación con funcionarios | Demuestra la necesidad de **evidencias identificables y examinables** | Frases de clasificación HS; no valor histórico |
-| **12** | Lee et al., recuperación de frases | Efectos comparados de agregar o no evidencia normativa | Distingue **calidad de la recomendación** y **utilidad de sus fundamentos** | Mismo programa investigador que 11; capítulo 85 |
-| **13** | Ravi et al., Text2Trade | Especialización de embeddings y estabilidad de ranking | Distingue la **recuperación de candidatos** de su **comparabilidad comercial** | Etiquetas HS y resultados sobre pruebas de distinto tamaño |
-| **14** | Pain, EDI | Preparación de descripciones ruidosas y comparación entre modelos STS | Muestra por qué la limpieza puede **conservar o eliminar atributos decisivos** | Tesis con documentos confidenciales y métrica singular |
-| **15** | Yang et al., HSCodeComp | Evaluación de agentes en reglas, contradicciones y fallos interpretativos | Documenta el riesgo de **antecedentes válidos pero inaplicables** y explicaciones erróneas | Exactitud de clasificación HS10, no valoración |
+| **1** | Vijayakumar (2025) | Integra agrupamiento textual, contexto comercial y comparaciones históricas en gestión del riesgo. | Descripción institucional de métodos y casos de uso. | No ofrece evaluación reproducible del modelo de valoración. |
+| **2** | Alqaryouti et al. (2024) | Combina distancia euclidiana y LOF para anomalías de declaraciones por grupo HS. | Experimentos sobre muestras de registros de Dubái. | No divulga datos ni todos los parámetros; anomalía no equivale a fraude. |
+| **3** | Chan et al. (2023) | Representa descripciones comerciales y estima distribuciones probabilísticas de valores unitarios. | Experimentos de clasificación y detección de anomalías. | La estimación estadística no es un antecedente documental individual. |
+| **4** | Alwanin et al. (2026) | Investiga clasificación de fraude y priorización por impacto económico con gradient boosting. | Experimentos con declaraciones sintéticas. | Resultados de simulación, no tributos efectivamente recuperados. |
+| **5** | Morgero y Macedo da Silva (2025) | Analiza artículo 17, duda razonable y prácticas latinoamericanas de verificación. | Fuentes jurídicas, entrevista y encuesta a siete países. | Evidencia jurídico-cualitativa, no medición algorítmica. |
+| **6** | Bayona (2025) | Contrasta correlaciones determinísticas, TF-IDF y SBERT para transposición arancelaria. | Correspondencias SA 2017–2022 evaluadas por expertos. | Exactitud global incluye rondas no semánticas. |
+| **7** | Kim, Kim y Choi (2025) | Estudia recuperación híbrida, reranking y generación contextual para códigos HS. | Experimentos THE-RAG con casos de clasificación. | Desempeño dependiente del corpus/modelo; no estima valores de transacción. |
+| **8** | Outram y Swartz (2026) | Describe integración de grafos comerciales, normalización de entidades, riesgo y valores. | Casos y despliegues comunicados por autores. | Sin protocolos completos públicos para reproducir el sistema. |
+| **9** | Brinkmann, Baumann y Bizer (2024) | Distingue extracción y normalización de atributos, y cuantifica errores por operación. | WDC-PAVE y experimentos con LLM. | Comercio electrónico; no evalúa emparejamiento de productos. |
+| **10** | Brinkmann, Shraga y Bizer (2024) | Analiza extracción de atributos con pocos datos y valores no vistos. | OA-Mine, AE-110K y pruebas de prompting/fine-tuning. | Generalización limitada a las condiciones experimentales estudiadas. |
+| **11** | Lee et al. (2023/2024) | Separa recomendación HS de evidencia documental y evalúa utilidad percibida. | Clasificador, evidencias y 32 funcionarios. | Evaluación de explicaciones limitada; sin productividad controlada. |
+| **12** | Lee et al. (2021) | Evalúa el efecto de agregar frases del manual HS al clasificador. | Ablación con/sin frases sobre capítulo 85. | Top-3 empeora al añadir frases bajo esa configuración. |
+| **13** | Ravi et al., Text2Trade | Especializa embeddings mediante MNRL y examina estabilidad de ranking con MCD. | Recuperación de códigos, prueba completa y ablación reducida. | Las cifras de MCD corresponden a otra muestra; no mide productos equivalentes. |
+| **14** | Pain (2021) | Estudia parsing EDI, depuración de textos y comparación de embeddings STS. | Transacciones de transportistas, NER, ML y STS. | Datos confidenciales; métrica de recomendación particular. |
+| **15** | Yang et al. (2025) | Introduce benchmark de reglas jerárquicas y taxonomía de errores de agentes. | HSCodeComp, anotación experta y ablaciones. | Exactitud HS10; referencia humana no plenamente comparable. |
 
-En conjunto, los estudios **1, 6, 7, 8, 13 y 14** aportan antecedentes de búsqueda y relación de textos/productos; **9 y 10** documentan extracción de atributos; **11 y 12** distinguen clasificación y evidencia; **15** examina fallos de aplicación de reglas; **2 y 3** analizan valores; **4** investiga priorización; y **5** delimita el marco jurídico-institucional. Las contribuciones son **complementarias, no equivalentes**, y algunas publicaciones comparten autores y datos.
+Los estudios abordan líneas parcialmente relacionadas: **recuperación textual y documental**, **extracción y normalización de atributos**, **clasificación arancelaria y aplicación de reglas**, **anomalías y riesgo**, y **marco jurídico de valoración**. Esta agrupación describe afinidades temáticas, no una secuencia de desarrollo ni un orden de superioridad metodológica.
 
 ## 5. Síntesis y discusión de la evidencia
 
@@ -255,17 +255,19 @@ Los porcentajes informados miden tareas diferentes: **F1 de extracción de atrib
 
 Existen además relaciones de dependencia bibliográfica: los artículos **11 y 12** pertenecen a una línea de investigación de autores/instituciones compartidos; ello no proporciona dos validaciones independientes de una misma conclusión. La consistencia de la etiqueta, partición temporal, dificultad del caso y reproducibilidad condicionan todas las inferencias.
 
-### 5.6. Vacío de conocimiento que permanece en el corpus
+### 5.6. Limitaciones transversales del corpus
 
-**Ninguno de los quince trabajos examinados presenta una validación reproducible, específica y conjunta de (i) identificación de mercancías idénticas o similares a partir de descripciones de DAM peruanas y (ii) idoneidad y trazabilidad de sus antecedentes históricos para los métodos de valoración.**
+Los quince estudios investigan **objetos y niveles de análisis distintos**: clasificación arancelaria, extracción de atributos, correspondencia entre textos, detección de anomalías, explicación documental y aplicación de normas. Sus resultados no constituyen una evaluación integrada de todas esas capacidades.
 
-Esta afirmación se limita **al corpus de quince textos revisados**; no es una declaración de inexistencia mundial de estudios semejantes ni una prueba automática de originalidad científica.
+Se observan tres restricciones recurrentes: **heterogeneidad de los criterios de relevancia** (coincidencia de código, atributo, frase o decisión), **diferencias de disponibilidad de datos y código** y **dependencia de las métricas respecto de idioma, población, periodo y complejidad de los casos**.
+
+Estas son limitaciones del **corpus de quince publicaciones examinadas**, no afirmaciones sobre la inexistencia de otros estudios en la literatura mundial.
 
 ## 6. Alcance y calidad de la evidencia
 
 | Tipo de evidencia | Estudios | Conclusión legítima | Restricción |
 |---|---|---|---|
-| Estudios experimentales aduaneros, de clasificación o producto | **2, 3, 4, 7, 9, 10, 11, 12 y 15** | Resultados para la tarea, corpus y métricas publicados | No trasladar sin validación a DAM, identidad o valoración |
+| Estudios experimentales aduaneros, de clasificación o producto | **2, 3, 4, 7, 9, 10, 11, 12 y 15** | Resultados para la tarea, corpus y métricas publicados | No extrapolable sin evaluación a otras poblaciones, tareas o procedimientos |
 | Estudios institucionales o de arquitectura integrada | **1 y 8** | Casos de uso y funciones descritas por autores | La presentación no sustituye pruebas abiertas de cada algoritmo |
 | Investigación jurídico-institucional cualitativa | **5** | Condiciones jurídicas y prácticas comunicadas en siete países | No mide eficacia computacional |
 | Documento de trabajo técnico con verificación de correspondencias | **6** | Comparación TF-IDF/SBERT y reglas sobre líneas arancelarias | No estudia identidad de mercancías |
@@ -278,7 +280,7 @@ Las fichas individuales identifican **qué resulta medido y qué es inferencia d
 
 ## 7. Reproducibilidad y disponibilidad de materiales
 
-La reproducibilidad es un atributo de **la evidencia experimental publicada**, no una medida de utilidad para SIVEP. Se distingue entre **repetir los experimentos originales con los mismos materiales**, **reimplementar un procedimiento descrito con otros datos** y **replicar un hallazgo en otro dominio**. Solo la primera operación, bajo condiciones suficientemente equivalentes, permite contrastar directamente las métricas de los autores.
+La reproducibilidad es un atributo de **la evidencia experimental publicada**, no una medida de importancia científica ni de aplicabilidad profesional. Se distingue entre **repetir los experimentos originales con los mismos materiales**, **reimplementar un procedimiento descrito con otros datos** y **replicar un hallazgo en otro dominio**. Solo la primera operación, bajo condiciones suficientemente equivalentes, permite contrastar directamente las métricas de los autores.
 
 La evaluación que sigue es una **auditoría documental de disponibilidad y suficiencia de materiales**. **No se ha ejecutado ninguno de los quince experimentos** ni se han verificado sus métricas por reproducción independiente. Las etiquetas indican **potencial de reproducibilidad**, no resultados reproducidos.
 
@@ -309,7 +311,7 @@ La evaluación que sigue es una **auditoría documental de disponibilidad y sufi
 
 **Alcance de la clasificación.** Los estudios **9, 10 y 15** presentan el mayor potencial de repetición controlada con materiales públicos; el **4** ofrece datos sintéticos abiertos de una investigación relacionada, no el paquete completo del método evaluado. Los niveles **parcial** o **baja** no implican que no pueda construirse una implementación independiente: implican que **no puede darse por reproducida la métrica original** a partir de los materiales aquí identificados.
 
-La reproducibilidad tampoco equivale a **transferibilidad**. Repetir F1 de extracción en comercio electrónico, Recall@10 de códigos HS o exactitud HS10 no validaría, por sí solo, la identificación de mercancías idénticas o similares en DAM ni la aptitud jurídica de un valor histórico como referencia.
+La reproducibilidad tampoco equivale a **transferibilidad**. Repetir F1 de extracción en comercio electrónico, Recall@10 de códigos HS o exactitud HS10 no demostraría, por sí solo, igual rendimiento en otros corpus, idiomas, poblaciones o tareas.
 
 ## 8. Referencias bibliográficas y fichas ampliadas
 
@@ -335,4 +337,4 @@ La reproducibilidad tampoco equivale a **transferibilidad**. Repetir F1 de extra
 
 ---
 
-*La revisión presenta evidencia bibliográfica y sus límites interpretativos. Ninguna cifra corresponde a una evaluación de desempeño de SIVEP ni puede utilizarse por sí sola para sustentar una decisión sobre el valor en aduana.*
+*Esta revisión presenta resultados de quince publicaciones y sus límites interpretativos. Cada cifra corresponde exclusivamente al problema, los datos y las condiciones documentadas en su fuente.*
