@@ -19,7 +19,7 @@ Fecha de actualización: 2026-11-21. Estado: F0, preparación metodológica. No 
 - Mecanismo de captura automática de prompts y respuestas en las plataformas externas, sujeto a sus capacidades y permisos.
 
 ## Revisión de literatura documental
-- Se prepararon **ocho fichas ampliadas** y un [índice con cuadros comparativos](docs/literature/README.md) en una rama/PR de documentación independiente (issue #9).
+- Se prepararon **quince fichas ampliadas** y un [índice con cuadros comparativos](docs/literature/README.md) en una rama/PR de documentación independiente (issue #9).
 - El trabajo es de **CONFIGURACIÓN**, sin activación de IA Coordinadora ni experimentos ejecutados.
 - Aportes centrales para el primer experimento: comparación de recuperación exacta, BM25, TF-IDF, embeddings y técnicas híbridas, con validación experta. **No se ha aprobado todavía una arquitectura final.**
 
