@@ -110,23 +110,17 @@ Se reporta **F1 = 81,6 %** en una prueba **simulada** del capítulo 71, introduc
 6. La prueba de valor total utiliza **anomalías simuladas**, por lo que no sustituye casos reales validados.
 7. Un intervalo predictivo no es un **valor de transacción de mercancía idéntica/similar** y no puede reemplazar la aplicación de los métodos de valoración.
 
-## 7. Aporte a SIVEP Inteligente
+## 7. Aporte científico y límites de generalización
 
-**Componente respaldado:** análisis de valores y estimación estadística **una vez** identificada correctamente la mercancía.
+La investigación muestra, para los capítulos estudiados, las ventajas de analizar el **valor unitario condicionado a la descripción del producto** frente a rangos generales por código. La distinción entre anomalías de valor unitario y total proporciona señales diferenciadas de calidad de datos.
 
-Propuestas propias para experimentos posteriores:
-- Comparar **mediana/cuántiles de antecedentes recuperados** con **regresión probabilística por atributos** y modelos predictivos de cuantiles.
-- Definir cuidadosamente el **valor unitario**, moneda, Incoterm/base FOB-CIF y unidad comercial antes de entrenar.
-- Evaluar intervalos con **cobertura**, anchura media, error y calibración por familia comercial.
-- Contrastar discrepancias de precio unitario con valor total y cantidad para diferenciar tipos de errores.
-- Mostrar de forma explícita la diferencia entre **valor histórico documentado** y **estimación probabilística del modelo**.
-- Aplicar exclusivamente indicadores para el especialista, nunca valores mínimos automáticos.
+No se recuperan declaraciones históricas individuales como fundamentos de una referencia de valoración. Las anomalías de valor total se prueban mediante datos simulados y los resultados no demuestran generalización a otros capítulos ni comparabilidad jurídica entre productos.
 
 ## 8. Conclusión
 
-El artículo demuestra experimentalmente que **interpretar la descripción comercial mejora el análisis contextual del valor** frente a rangos gruesos por código. Es una referencia fuerte para un **módulo posterior de estimación y anomalías**, pero **no resuelve el primer problema de SIVEP: recuperar DAM de mercancías idénticas o similares y acreditar su comparabilidad**.
+El artículo demuestra experimentalmente que la descripción comercial puede mejorar el análisis estadístico del valor frente a rangos generales por código. No evalúa recuperación de antecedentes individuales ni equivalencia material o jurídica entre mercancías.
 
 **Relacionados:** [2 — distancias/LOF](02-alqaryouti-2024-dubai.md), [5 — condiciones jurídicas](05-morgero-macedo-2025-articulo-17.md), [8 — solución integrada](08-outram-swartz-2026-fronteras.md).
 
 ---
-*Resultados reproducidos de las tablas del PDF. No constituyen tasas esperadas para SUNAT.*
+*Se presentan las cifras comunicadas por los autores, sin que ello implique haber reproducido los experimentos.*
