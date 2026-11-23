@@ -61,7 +61,7 @@ class LiteratureReviewTest(unittest.TestCase):
                 )
                 self.assertNotIn("SIVEP", text)
                 self.assertNotRegex(text.lower(), r"nuestro proyecto|nuestra investigación|experimentos propios|propuestas propias")
-                sections = [int(n) for n in re.findall(r"^## (\\d+)\\.", text, flags=re.MULTILINE)]
+                sections = [int(n) for n in re.findall(r"^## (\d+)\.", text, flags=re.MULTILINE)]
                 self.assertEqual(sections, list(range(1, len(sections) + 1)))
 
     def test_reproducibility_matrix_covers_each_study(self):
