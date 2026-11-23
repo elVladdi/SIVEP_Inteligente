@@ -93,12 +93,11 @@ Los artículos **12 y 11 comparten autores, instituciones y enfoque**; el 11 rep
 
 Las cifras Top-3 de ambos trabajos **no son comparables directamente** por cambios de datos, cobertura y protocolo.
 
-## 8. Relevancia para SIVEP Inteligente
+## 8. Contribución científica y conclusión
 
-La contribución más importante es **demostrar experimentalmente que añadir más evidencia no garantiza mejorar la predicción**. En nuestro problema, una lista de referencias históricas puede parecer convincente sin ser técnicamente o jurídicamente pertinente; por eso la evidencia debe examinarse por su contenido y procedencia.
+La investigación muestra mediante una ablación que **incorporar frases normativas a un clasificador no garantiza aumentar la exactitud**: en el protocolo evaluado, Top-1 HS6 mejora levemente, mientras Top-3 y Top-5 empeoran.
 
-La separación entre **recomendación, recuperación documental y evaluación humana** constituye un antecedente de arquitectura explicable, no un resultado obtenido en valoración.
-
-**Conclusión:** pertinencia **alta** para diseño y evaluación de evidencias; no acredita identidad/similitud de mercancías ni admisibilidad de antecedentes de valor.
+La recuperación de frases puede aportar información explicativa, pero su utilidad documental debe evaluarse separadamente de la exactitud del código. La comparación está limitada al capítulo 85 y no constituye evidencia de identidad comercial o de valoración aduanera.
 
 **Lecturas relacionadas:** [11](11-lee-et-al-2024-explainable-customs.md), [7](07-kim-kim-choi-2025-the-rag.md) y [5](05-morgero-macedo-2025-articulo-17.md).
+
