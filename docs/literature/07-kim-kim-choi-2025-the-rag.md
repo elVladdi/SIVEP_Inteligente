@@ -35,7 +35,7 @@ El procedimiento completo se ejecuta en **dos etapas**:
 
 Los investigadores mencionan **ColBERT** y la *late interaction* de tokens como técnica de reordenamiento. El documento usa ocasionalmente la etiqueta “cross-encoder”, pero ColBERT **no debe equipararse sin más a un cross-encoder clásico** que procesa conjuntamente consulta y documento en cada inferencia.
 
-**Principal transferencia a SIVEP:** las búsquedas léxicas y semánticas pueden ser complementarias. BM25 favorece modelos, marcas y palabras exactas; los embeddings recuperan variantes lingüísticas; el reranking puede examinar candidatos difíciles con mayor detalle.
+**Observación técnica:** las señales léxicas y semánticas pueden recuperar documentos distintos; BM25 privilegia términos exactos, los embeddings aproximan expresiones y el reranking reordena los candidatos combinados. El artículo no separa de forma completa las ganancias de cada componente.
 
 ## 3. Corpus, normalización y chunks
 
@@ -54,7 +54,7 @@ Los chunks evaluados contienen **250, 500, 1 000, 1 500, 2 000, 2 500, 3 000 y 3
 
 Los textos normativos y de mercancías pueden tener diferentes niveles jerárquicos y detalles. Un chunk corto puede excluir información determinante; uno grande puede incluir ruido, fragmentos irrelevantes o demasiado contexto para el LLM.
 
-En SIVEP debemos distinguir **unidad de recuperación** (DAM/serie completa) y **fragmentación de documentos normativos**. No es automático que convenga dividir una descripción comercial corta de DAM en chunks de miles de tokens.
+La **unidad de recuperación** y la **fragmentación de documentos normativos** son decisiones diferentes. El estudio no demuestra que fragmentar una descripción comercial corta en chunks extensos mejore su clasificación.
 
 ## 4. Diseño experimental
 
@@ -140,22 +140,15 @@ En esa configuración, **RAG perjudica el resultado de Llama**. Por tanto, la me
 6. Resultado sensible al chunk, modelo y composición de casos; alta concentración de la muestra en seis capítulos.
 7. Debe verificarse la separación entre ejemplos de evaluación y documentos de decisiones históricas utilizados para indexar: el artículo no aporta una auditoría completa de fugas de respuesta.
 
-## 9. ¿Qué investigaremos con SIVEP?
+## 9. Contribución metodológica y condiciones de validez
 
-**Aporte principal: diseño de recuperación híbrida**, no recomendación de códigos.
+El trabajo estudia una arquitectura de **recuperación híbrida y reordenamiento** para apoyar la clasificación HS mediante documentación oficial. Los experimentos muestran mejoras respecto del LLM sin RAG bajo determinadas configuraciones, pero también degradaciones para otros modelos y tamaños de fragmento.
 
-Propuesta propia:
-1. BM25 sobre descripciones y atributos conservados.
-2. Recuperación vectorial mediante embeddings probados en español y lenguaje técnico.
-3. **Fusión** de candidatos de ambos recuperadores y reranking.
-4. Comprobación explícita de atributos técnicos: coincidencias y contradicciones (marca, modelo, capacidad, composición, unidades).
-5. Comparación **sin reranker / con reranker**, y **sin LLM / con LLM solo para explicación**.
-6. Métricas separadas: Recall@k del candidato, Precision@k del ranking, errores de etiqueta idéntica/similar, tasa de abstención y exactitud de explicación.
-7. Uso de código arancelario **como restricción experimental**, no como demostración de equivalencia de productos.
+La evaluación mide **acierto de código arancelario**, no exhaustividad ni precisión de los documentos recuperados y tampoco equivalencia entre mercancías. La falta de ablaciones completas y el posible solapamiento entre decisiones indexadas y casos evaluados limitan la atribución causal de las mejoras.
 
 ## 10. Conclusión
 
-THE-RAG aporta una **arquitectura experimental concreta** de búsqueda léxica + semántica + reordenamiento + razonamiento jerárquico. Las ventajas de clasificación documentadas son relevantes, pero no equivalen a calidad del matching de DAM. Para SIVEP será una **alternativa comparativa**, cuyo costo y beneficio deben verificarse frente a métodos simples.
+THE-RAG combina **recuperación léxica y semántica, reordenamiento y razonamiento jerárquico**. Sus resultados acreditan mejoras condicionadas de clasificación HS, pero no demuestran calidad de emparejamiento entre mercancías individuales.
 
 **Relacionados:** [6 — TF-IDF y SBERT](06-bayona-2025-transposicion-hs.md), [1 — agrupamiento de mercancías](01-vijayakumar-2025-india.md), [5 — validación de referencias](05-morgero-macedo-2025-articulo-17.md).
 
