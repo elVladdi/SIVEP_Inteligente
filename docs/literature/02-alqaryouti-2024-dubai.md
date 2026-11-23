@@ -84,22 +84,17 @@ Las **Figuras 3 y 4** muestran que los grupos con más antecedentes permiten res
 - **Temporalidad:** no demuestra evaluación retrospectiva con únicamente datos existentes antes de cada DAM analizada.
 - **Confiabilidad jurídica:** el histórico no se segmenta de forma plenamente documentada por valor declarado, analizado o determinado.
 
-## 7. Transferencia a SIVEP Inteligente
+## 7. Aporte metodológico y límites de la evidencia
 
-**Etapa en que sería útil:** después de identificar antecedentes de mercancías comercialmente comparables, para medir valores atípicos y generar señales de riesgo.
+El artículo desarrolla un procedimiento en **dos etapas** que combina distancias respecto de operaciones agrupadas por código HS y densidad local mediante LOF. La segunda etapa puede reconsiderar señales de anomalía generadas en la primera.
 
-**Experimentos sugeridos por nuestro proyecto (no incluidos en el artículo):**
-1. Baseline por SA6 con mediana/IQR/MAD frente al mismo baseline sobre conjuntos de **mercancías técnicamente comparables**.
-2. LOF, distancia normalizada e Isolation Forest con tratamiento correcto de variables mixtas.
-3. Pruebas por subpartida y tamaño de histórico; política de **abstención** cuando hay pocas referencias.
-4. Validación temporal y por resultado de revisión efectiva, sin etiquetar «sin fraude» una DAM que nunca fue revisada.
-5. Métricas operativas: alertas por 1 000 DAM, precisión de los primeros casos priorizados, falsos positivos y estabilidad por familia.
+Los resultados dependen de grupos HS relativamente poblados y muestras de prueba balanceadas. El estudio no utiliza etiquetas de mercancías idénticas o similares ni aporta datos y parámetros suficientes para reproducir de manera independiente las cifras reportadas.
 
 ## 8. Conclusión
 
-**Aporte principal:** un algoritmo y resultados para **anomalías estadísticas de valor**. **No es una solución de identidad/similitud de productos**. En SIVEP debe considerarse como línea base del módulo de análisis de valores, posterior al módulo de recuperación documental, y sus alertas deberán seguir sometidas al juicio del especialista.
+**Aporte principal:** detección de **anomalías estadísticas de valor** combinando distancias y LOF. La clasificación normal/anómala no acredita identidad o similitud de mercancías ni constituye una determinación legal del valor.
 
 **Relacionados:** [1 — India](01-vijayakumar-2025-india.md), [3 — Hong Kong](03-chan-ng-chung-2023-hong-kong.md), [5 — artículo 17](05-morgero-macedo-2025-articulo-17.md).
 
 ---
-*Los porcentajes corresponden a condiciones experimentales del artículo; no son estimaciones de desempeño de SIVEP ni equivalen a una valoración legal.*
+*Los porcentajes corresponden a condiciones experimentales específicas del estudio y no equivalen a una determinación legal del valor.*
