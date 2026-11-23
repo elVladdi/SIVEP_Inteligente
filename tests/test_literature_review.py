@@ -1,4 +1,4 @@
-"""Regresión documental de la revisión bibliográfica de SIVEP Inteligente.
+"""Regresión documental de una revisión bibliográfica científica autónoma.
 
 Ejecutar: python -m unittest discover -s tests -p 'test_literature_review.py'
 Sin dependencias ni acceso a red.
@@ -59,7 +59,10 @@ class LiteratureReviewTest(unittest.TestCase):
                 self.assertTrue(
                     any(word in text.lower() for word in ("limitaciones", "límites", "validez"))
                 )
-                self.assertIn("SIVEP", text)
+                self.assertNotIn("SIVEP", text)
+                self.assertNotRegex(text.lower(), r"nuestro proyecto|nuestra investigación|experimentos propios|propuestas propias")
+                sections = [int(n) for n in re.findall(r"^## (\\d+)\\.", text, flags=re.MULTILINE)]
+                self.assertEqual(sections, list(range(1, len(sections) + 1)))
 
     def test_reproducibility_matrix_covers_each_study(self):
         index = (LIT / "README.md").read_text(encoding="utf-8")
