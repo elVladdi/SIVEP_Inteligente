@@ -115,13 +115,11 @@ Este ejercicio **no** constituye una comparación estadística formal con KLUE-R
 7. Datos/particiones no reconstruibles completamente solo con las cifras públicas.
 8. Las normas y decisiones de **clasificación** no resuelven por sí solas el uso de valores históricos en valoración.
 
-## 9. Aporte a SIVEP Inteligente
+## 9. Contribución científica y límites de las explicaciones
 
-La contribución principal es **la separación entre modelo que recomienda y documentos que sustentan la recomendación**, junto con una evaluación independiente de evidencias y una prueba con profesionales.
+El trabajo separa **predicción de códigos** y **recuperación de frases normativas**, y evalúa de manera diferenciada la coincidencia de la evidencia recuperada con anotaciones expertas y la utilidad percibida por funcionarios. Esta separación metodológica evita confundir una decisión de clasificación correcta con una explicación suficientemente fundamentada.
 
-La conexión con SIVEP se refiere a **evidencia trazable**: ID de DAM histórica, texto y atributos originales, coincidencias/diferencias, procedencia y estado de revisión del valor, y condiciones comerciales. Estas categorías son una **lectura de aplicabilidad**, no componentes implementados o medidos en el sistema coreano.
-
-Un fundamento normativo citado puede ser verdadero y, sin embargo, insuficiente para justificar una referencia de valoración. Del mismo modo, un texto de explicación correcto no hace comparable por sí solo una mercancía.
+La evidencia documental recuperada se refiere a **clasificación HS**; no acredita por sí misma la equivalencia comercial entre productos ni la admisibilidad de referencias de valoración. Las pruebas de recuperación de frases y la encuesta tienen alcance delimitado por su muestra.
 
 ## 10. Conclusión y vínculos
 
