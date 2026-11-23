@@ -113,18 +113,16 @@ El artículo informa Recall@10 de aproximadamente **96 % en textiles**, **89 % e
 6. El manuscrito tiene **metadatos de conferencia de plantilla**, sin DOI editorial verificable en la versión suministrada.
 7. Los algoritmos optimizan **recuperación de códigos**, no correspondencia entre registros de la misma mercancía.
 
-## 8. Contribución a SIVEP Inteligente
+## 8. Contribución metodológica y alcance
 
-Aporta evidencia sobre **especialización de embeddings**, **negativos difíciles** y **ranking Top-k**. La principal transferencia conceptual es que el entrenamiento debe utilizar **etiquetas correspondientes a la tarea real**.
+Text2Trade evidencia, en las pruebas comunicadas, el efecto del **aprendizaje contrastivo MNRL** sobre recuperación de códigos HS y el aporte adicional de MCD a la estabilidad y ordenamiento de candidatos. Los negativos difíciles se generan según cercanía en la jerarquía de códigos.
 
-Para mercancías comparables, un par de descripciones con el mismo HS puede incluir productos **distintos** por versión, modelo o capacidad. Una función de pérdida que trate todo par con el mismo código como positivo puede borrar esas diferencias.
-
-El análisis de estabilidad por MCD constituye una señal de consistencia de ranking, no una prueba de comparabilidad. El uso de resultados requiere atributos y evidencia documental adicionales.
+Las etiquetas positivas corresponden a **códigos**, no a parejas de productos idénticos o similares. Una misma subpartida puede contener mercancías con distintas especificaciones; por ello, el rendimiento de recuperación de códigos no debe interpretarse como precisión de emparejamiento comercial.
 
 ## 9. Relación con evidencia previa
 
-En [NANDINA-RAG](https://github.com/elVladdi/gci-nandina-rag) se documentó una evaluación propia de una adaptación MNRL cuyo rendimiento fue bajo en una tarea de recuperación de **NANDINA8**. Eso no refuta Text2Trade: corpus, idioma, etiquetas y protocolos difieren. Sirve como ejemplo de que una técnica no garantiza transferencia automática entre proyectos.
+El trabajo de [Bayona (6)](06-bayona-2025-transposicion-hs.md) aborda una tarea distinta de correspondencia de líneas arancelarias; sus métricas no son directamente comparables con las de Text2Trade.
 
-Comparar también con [Bayona (6)](06-bayona-2025-transposicion-hs.md), [Kim et al. (7)](07-kim-kim-choi-2025-the-rag.md) y [Pain (14)](14-pain-2021-clasificacion-transfer-learning.md).
+Otros trabajos relacionados: [Kim et al. (7)](07-kim-kim-choi-2025-the-rag.md) sobre recuperación híbrida y [Pain (14)](14-pain-2021-clasificacion-transfer-learning.md) sobre embeddings en documentación EDI.
 
 **Conclusión:** pertinencia **alta para recuperación semántica**, pero sin resultados directos de mercancías idénticas/similares ni valores históricos admisibles para valoración.
