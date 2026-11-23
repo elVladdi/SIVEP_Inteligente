@@ -159,18 +159,11 @@ Estos son ejemplos de **clasificación HS**, no reglas generales de valor en adu
 - El dataset disponible puede excluir **URL e imágenes**, lo que limita la réplica íntegra del experimento multimodal.
 - El valor de producto `precio` es un atributo de e-commerce, **no** valor CIF, valor en aduana ni referencia de transacción ajustada.
 
-## 8. Contribución a SIVEP Inteligente
+## 8. Contribución científica y límites del benchmark
 
-**Pertinencia media para la primera pregunta de comparabilidad; alta como evidencia de fallos de agentes y aplicación de reglas.**
+HSCodeComp aporta un **conjunto de evaluación anotado por especialistas** para estudiar la aplicación de reglas arancelarias jerárquicas y una taxonomía de fallos de agentes de búsqueda. Los errores incluyen decisiones prematuras, tratamiento defectuoso de atributos, alucinaciones y aplicación incorrecta de excepciones.
 
-La enseñanza más relevante es la necesidad de diferenciar:
-- Hechos comerciales **expresos** y sus fuentes.
-- Atributos **inferidos** que pueden ser incorrectos.
-- Antecedentes **existentes** que pueden ser **inaplicables**.
-- Normas **recuperadas** frente a normas **correctamente aplicadas**.
-- Una explicación **plausible** frente a una explicación **respaldada y revisable**.
-
-Un antecedente histórico legítimo en SIVEP puede describir una mercancía comercialmente distinta, así como un código vigente puede ser incorrecto para un producto determinado. El benchmark no prueba una solución para esa diferencia, pero documenta por qué **la mera disponibilidad de información y un agente generativo no bastan**.
+La presencia de una fuente o un código válido **no garantiza una decisión correcta**, y más búsqueda o autorreflexión no mejora necesariamente la exactitud. El benchmark mide clasificación HS10 y no valida selección de mercancías idénticas o similares ni utilización de antecedentes históricos para valoración.
 
 ## 9. Relación con la colección
 
