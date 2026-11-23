@@ -27,7 +27,7 @@ Su objetivo combina, en términos generales:
 
 El documento desarrolla gradientes, segundas derivadas y ganancia de particiones en sus ecuaciones; se realiza búsqueda de hiperparámetros.
 
-Una configuración destacada usa **learning rate 0,1, max depth 16, subsample 0,8, L1 0,5, L2 0,5 y gamma 1**. Estas cifras son propias del experimento y **no** parámetros recomendados automáticamente para SIVEP.
+Una configuración destacada usa **learning rate 0,1, max depth 16, subsample 0,8, L1 0,5, L2 0,5 y gamma 1**. Estos parámetros describen el experimento, no una solución óptima para otros datos.
 
 ## 3. Conjunto de datos y variables
 
@@ -91,7 +91,7 @@ Las variantes con embeddings y autoencoders no mejoran el F1 respecto al DXGBA o
 
 Los autores utilizan **SHAP** para interpretar contribuciones de variables como peso, código HS y condiciones tributarias en las predicciones.
 
-Pero una explicación SHAP (“este atributo elevó la probabilidad de fraude”) **no equivale** a una explicación documental de valoración (“estas DAM históricas corresponden a mercancías comparables por atributos verificables”). Para SIVEP serán dos explicaciones potencialmente complementarias, con obligaciones de evidencia distintas.
+Una explicación SHAP («esta variable incrementó la puntuación de fraude») describe el comportamiento estadístico del modelo. No equivale a un fundamento documental de comparabilidad de mercancías ni de admisibilidad de antecedentes históricos.
 
 ## 8. Limitaciones de validez
 
@@ -103,21 +103,15 @@ Pero una explicación SHAP (“este atributo elevó la probabilidad de fraude”
 6. Un alto porcentaje económico simulado no demuestra valor fiscal determinado o recaudación efectiva.
 7. El sistema se basa en etiquetas; una DAM nunca revisada **no debe convertirse automáticamente en etiqueta de ausencia de fraude**.
 
-## 9. Aporte a SIVEP Inteligente
+## 9. Aporte científico y límites de los resultados
 
-**Etapa apropiada:** priorización de DAM con posible subvaloración para **control posterior**, una vez que existan comparabilidad, señales de valor y resultados de revisión confiables.
+La investigación compara un esquema de aprendizaje conjunto para **clasificación y priorización económica** con otros clasificadores, junto con remuestreo y análisis de importancia de características. El F1 supera ligeramente al de XGBoost bajo la configuración publicada.
 
-Experimentos propios sugeridos:
-- Comparar rankings por **probabilidad de alerta**, **brecha porcentual de valor**, **impacto tributario estimado** y un **modelo conjunto**.
-- Usar métricas **Precision@presupuesto**, lift y porcentaje de resultados verificados capturados con capacidad de revisión fija.
-- Tratar **no inspeccionado** como estado desconocido; controlar sesgo de selección de los controles previos.
-- Verificar calendarios, costos de falsos positivos y incertidumbre de cálculos económicos.
-
-**No usar DXGBA como sustituto del recuperador de mercancías** ni asumir el 87,98 % como beneficio esperable.
+La elevada cobertura económica se obtiene sobre **declaraciones sintéticas**, no sobre recuperaciones tributarias verificadas. La relación entre el objetivo monetario Item price y una estimación de tributos recuperables permanece insuficientemente definida.
 
 ## 10. Conclusión
 
-El artículo aporta una arquitectura y métricas para **priorización del riesgo económico**; su valor para el primer experimento de identificación de mercancías es limitado. Su evidencia fiscal es simulada y debe citarse con esa salvedad.
+El artículo aporta una arquitectura y métricas para **priorización del riesgo económico**, no para la identificación de mercancías idénticas o similares. La evidencia fiscal es simulada y debe citarse con esa salvedad.
 
 **Relacionados:** [2 — anomalías de valoración](02-alqaryouti-2024-dubai.md), [3 — intervalos predictivos](03-chan-ng-chung-2023-hong-kong.md), [8 — plataforma integral](08-outram-swartz-2026-fronteras.md).
 
