@@ -17,6 +17,11 @@ Proyecto de investigación y desarrollo para recuperar antecedentes de mercancí
 
 Definir y validar una **metodología de identificación de mercancías idénticas, similares y no comparables** sobre descripciones del formato B de DAM y otros atributos disponibles en SIVEP. El alcance inicial de mercancías y el nivel arancelario (SA 6, NANDINA 8 o nacional 10 dígitos) **aún no se han elegido**.
 
+## Revisión de literatura
+
+- **[Revisión de quince trabajos: síntesis y matrices comparativas](docs/literature/README.md)**. Incluye fichas ampliadas individuales (trabajos 1–15), metodología publicada, resultados, limitaciones y aportaciones científicas a la investigación de SIVEP.
+- La revisión documenta antecedentes de gestión de riesgo, recuperación de mercancías, estimación de valor y marco jurídico; **no implica elección de modelo definitivo**.
+
 ## Cómo empezar
 
 - [PROJECT_STATE.md](PROJECT_STATE.md): estado vigente, acuerdos, dudas y tareas siguientes.
