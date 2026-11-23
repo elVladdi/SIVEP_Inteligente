@@ -14,7 +14,7 @@ El Acuerdo de Valoración Aduanera de la OMC establece como método principal el
 
 Las administraciones necesitan comprobar operaciones sospechosas **sin transformar precios históricos o valores de referencia en mínimos obligatorios**. El estudio examina cómo ejercen esa función varios países y qué dificultades enfrentan con la **duda razonable**, la recolección de pruebas y el acceso a antecedentes de mercancías idénticas o similares.
 
-La pregunta particularmente próxima a SIVEP es: **¿qué calidad y estado de revisión deberían tener los antecedentes históricos empleados para gestión de riesgos y para métodos de valoración?**
+Una pregunta que aborda el estudio es **qué calidad y estado de revisión deberían tener los antecedentes históricos empleados en gestión de riesgos y en métodos de valoración**.
 
 ## 2. Metodología
 
@@ -31,7 +31,7 @@ Las autoras recuerdan que la administración puede solicitar información comple
 
 El especialista entrevistado advierte que **una diferencia frente a valores históricos no justifica por sí sola rechazar el valor de transacción**. También se cita la precaución doctrinal frente a porcentajes universales de discrepancia, porque las condiciones comerciales y fluctuaciones dependen de la mercancía.
 
-Para SIVEP:
+La distinción conceptual es la siguiente:
 - Una **brecha de precio** es un indicador cuantitativo, no una prueba definitiva.
 - El sistema puede priorizar casos y exhibir antecedentes para consideración del especialista.
 - No deberá generar por sí mismo una **determinación jurídica** ni declarar que una «duda razonable» está formalmente sustentada sin los actos del procedimiento.
@@ -66,7 +66,7 @@ El trabajo reporta diferencias entre países en la composición de sus bases de 
 | **Perú** | Base que contiene valores declarados (incluido canal verde), **valores analizados** y **valores en evaluación**. |
 | **Brasil** | Se examinan otras prácticas y modernización, sin clasificación homogénea de estados en el mismo nivel de detalle para esta comparación. |
 
-**Sobre Perú:** el entrevistado reporta una base que sirve para consultar antecedentes y apoyar análisis de valores. El artículo **no identifica inequívocamente esa base mediante el acrónimo SIVEP ni proporciona el diccionario de campos técnicos**. Debemos corroborar directamente el uso, significado y vigencia de esos estados en el sistema peruano.
+**Sobre Perú:** la fuente reporta una base de consultas de antecedentes y análisis de valores, pero no publica su diccionario técnico de campos ni permite verificar de forma independiente el significado y la vigencia de todos sus estados.
 
 ## 6. Control posterior
 
@@ -81,7 +81,7 @@ Esto respalda nuestro caso de uso de revisar masivamente DAM no seleccionadas du
 
 Las autoras describen el **Catálogo de Productos** del Portal Único de Comercio Exterior / SISCOMEX en Brasil. Registrar características mediante campos preestructurados puede mejorar la estandarización y búsqueda de mercancías idénticas o similares.
 
-**Implicación directa:** para SIVEP no conviene depender exclusivamente de un embedding de texto. Debemos estudiar la extracción de atributos estructurados según familia: marca, modelo, composición, presentación, medidas, capacidad, estado nuevo/usado y otros elementos pertinentes.
+**Alcance del ejemplo brasileño:** los catálogos de producto permiten registrar características estructuradas como marca, modelo, composición, presentación, dimensiones y estado. El artículo no evalúa la precisión de métodos de extracción automática.
 
 El artículo **no** ofrece un algoritmo de extracción automática ni demuestra una mejora cuantificada de *product matching*. Su aporte es de **requisito funcional e institucional**.
 
@@ -89,7 +89,7 @@ El artículo **no** ofrece un algoritmo de extracción automática ni demuestra 
 
 El documento distingue situaciones de verificación ordinaria de valor y determinadas circunstancias relacionadas con fraude/documentación falsa y normas nacionales específicas. Se menciona para Perú la **Ley N.º 28008** en la discusión de supuestos delictivos.
 
-Para nuestro sistema, los flujos de **alerta de riesgo, duda razonable, determinación del valor y actuación por presunto delito** deberán representarse por separado. Una revisión normativa de disposiciones actualmente vigentes es una tarea independiente; el artículo **no reemplaza** esa verificación.
+Las categorías de **alerta de riesgo, duda razonable, determinación del valor y presunto delito** requieren fundamentos jurídicos diferenciados. El artículo no sustituye la consulta de la normativa vigente.
 
 ## 9. Resultados y límites del estudio
 
@@ -100,36 +100,22 @@ Para nuestro sistema, los flujos de **alerta de riesgo, duda razonable, determin
 | ¿Se contempla Perú y su histórico declarado/analizado/en evaluación? | Sí |
 | ¿Se mide la precisión de un algoritmo de búsqueda? | **No** |
 | ¿Se demuestra que una base de valores verificados reduce falsos positivos? | **No experimentalmente** |
-| ¿Se proporcionan reglas informáticas de SIVEP? | **No** |
+| ¿Se proporciona un diccionario técnico de los sistemas mencionados? | **No** |
 | ¿Todos los países validan valores mediante automatización exclusiva? | No se reporta esa práctica |
 
 La evidencia es **normativa e institucional**, no métrica o computacional. Su principal límite es la muestra de siete respuestas y la dependencia de información declarada por participantes, sin auditorías independientes de cada sistema.
 
-## 10. Aporte concreto a SIVEP Inteligente
+## 10. Aporte jurídico-institucional y límites documentales
 
-**Este artículo fija condiciones de uso, antes que un algoritmo.** Proponemos dos circuitos:
+La contribución principal es diferenciar el uso de antecedentes históricos como **indicadores de riesgo** de su utilización bajo los **métodos de valoración**. La fuente destaca la importancia de la procedencia y estado de revisión de los valores y la insuficiencia de una simple brecha de precios para rechazar el valor declarado.
 
-1. **Circuito de riesgo:** busca y compara antecedentes amplios, mostrando estado de revisión, origen de datos y limitaciones; produce un ranking de posibles alertas.
-2. **Circuito de referencias para valoración:** filtra antecedentes por su documentación y estado jurídicamente relevante y presenta información para la evaluación del especialista, sin automatizar la decisión.
-
-### Requisitos de datos propuestos
-
-| Campo/categoría de diseño | Pregunta que debemos verificar |
-|---|---|
-| Procedencia del valor | ¿Declarado, rectificado, revisado, determinado? |
-| Estado de análisis | ¿Analizado, en evaluación, pendiente? ¿Cómo lo registra SIVEP? |
-| Evidencia | ¿Existe documento, expediente o resultado verificable? |
-| Temporalidad | ¿Cuándo ocurrió la operación y cuándo quedó firme/verificado el valor? |
-| Comparabilidad | ¿Corresponde mercancía idéntica/similar conforme a criterios del método? |
-| Condiciones comerciales | ¿Nivel comercial, cantidad, origen y demás diferencias requieren ajustes? |
-
-Estas son **propuestas de requisitos de SIVEP**, no columnas comprobadas en su base.
+El catálogo de productos brasileño constituye un ejemplo de **estructuración de características comerciales**, no una prueba experimental de algoritmos de comparación. Las respuestas de siete países permiten identificar diversidad de prácticas, pero no verificar técnicamente el funcionamiento de sus plataformas.
 
 ## 11. Conclusión
 
-Es un **antecedente jurídico-operativo prioritario**. Define por qué la calidad de las referencias históricas y la intervención humana importan tanto como la similitud de descripciones. **No produce un algoritmo**, pero impone la necesidad de diferenciar los usos de SIVEP para **gestión de riesgos** y **sustento de valoración**.
+Es una investigación **jurídico-institucional**, no un experimento de IA. Su principal hallazgo es la necesidad de diferenciar los usos de bases históricas de valor para **gestión de riesgos** y para **métodos de valoración**.
 
 **Relacionados:** [1 — modelo indio](01-vijayakumar-2025-india.md), [3 — valor estadístico](03-chan-ng-chung-2023-hong-kong.md), [8 — plataforma integral](08-outram-swartz-2026-fronteras.md).
 
 ---
-*Este resumen es análisis de una publicación académica de 2025, no dictamen jurídico actualizado ni descripción comprobada del esquema interno de SIVEP.*
+*Esta ficha analiza una publicación académica de 2025; no constituye un dictamen jurídico actualizado ni una auditoría de sistemas institucionales.*
