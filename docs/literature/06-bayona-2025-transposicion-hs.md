@@ -19,7 +19,7 @@ El trabajo manual resulta laborioso y complejo porque una línea puede tener:
 
 La autora pregunta cómo **automatizar correspondencias con reglas y similitud de textos**, reduciendo tiempo de trabajo sin perder exactitud.
 
-**Diferencia respecto de SIVEP:** compara **textos normativos de líneas arancelarias**, no descripciones de DAM individuales ni antecedentes de valoración. Por eso sus resultados no miden el reconocimiento de mercancías jurídicamente idénticas/similares.
+**Objeto de la tarea:** se comparan **textos normativos de líneas arancelarias**, no descripciones de mercancías individuales ni antecedentes de valoración; las cifras no miden identidad comercial o jurídica entre productos.
 
 ## 2. Diseño metodológico de tres rondas
 
@@ -75,7 +75,7 @@ Esto significa que las reglas y coincidencias exactas procesan **97,8 %** de la 
 | Economía B con subencabezados añadidos | **85,4 %** | **83,5 %** | Gana TF-IDF |
 | Economía B sin subencabezados añadidos | **85,6 %** | **89,5 %** | Gana SBERT |
 
-Los porcentajes son **exactitudes de correspondencia de líneas en la fase evaluada**, no medidas de Precision@k de mercancías en SIVEP.
+Los porcentajes miden **exactitud de transposición de líneas arancelarias** en la fase evaluada, no Precision@k de recuperación de mercancías.
 
 **Nota de auditoría:** el documento comunica **90,1 %** para SBERT de economía A, pero uno de los recuentos tabulados permite obtener una cifra levemente distinta según cómo se sumen categorías. Mantener la cifra publicada **con nota de inconsistencia aritmética**, no corregir la fuente sin validación.
 
@@ -103,7 +103,7 @@ La sección sobre similitud coseno informa:
 
 Algunos emparejamientos **incorrectos de SBERT llegan a 0,98** y los de TF-IDF también pueden alcanzar puntuaciones muy altas. El solapamiento muestra que **un umbral universal de coseno no prueba equivalencia**.
 
-Este hallazgo es prioritario para SIVEP: una similitud de 0,95 entre dos descripciones no demuestra que sean mercancías idénticas, especialmente si difieren en una característica decisiva.
+El estudio demuestra que una similitud coseno elevada —incluso 0,98— no garantiza que la correspondencia sea correcta cuando existen características técnicas discriminantes.
 
 ## 8. Análisis de errores técnicos
 
@@ -128,23 +128,15 @@ El artículo estudia fallos por:
 - Compara principalmente una correspondencia final, no exhaustivamente rankings de antecedentes Top-5/Top-10.
 - El éxito global depende ampliamente de las reglas de las dos primeras rondas.
 
-## 10. Experimentos derivados para SIVEP
+## 10. Contribución metodológica y límites de transferencia
 
-**Diseño inicial sugerido por nuestra investigación:**
+El estudio distingue **correspondencias determinísticas, coincidencias textuales exactas y similitud NLP**. La mayor parte del universo se resuelve antes de la ronda semántica, y la revisión humana permite cuantificar errores. También demuestra que puntuaciones muy altas de coseno pueden corresponder a emparejamientos equivocados.
 
-1. **Coincidencia exacta estructurada:** atributos técnicos normalizados por tipo de producto.
-2. **Baseline TF-IDF + coseno** para recuperación de antecedentes.
-3. **SBERT + coseno**, verificando idioma español y terminología de importaciones.
-4. **Combinación híbrida** y reranking opcional.
-5. **Filtros arancelarios experimentales:** comparar SA6, NANDINA8 y subpartida nacional solo cuando definamos la familia piloto.
-6. **Evaluación humana:** múltiples etiquetas de comparabilidad; medir Precision@k, Recall@k, *false-identical rate*, cobertura y latencia.
-7. **Ablaciones:** descripción libre sola versus texto más atributos; preprocesamiento con y sin conservación de modelos/números; reglas estrictas frente a filtros flexibles.
-
-**No asumir** que la mayor exactitud de transposición arancelaria se replica en mercancías de SIVEP.
+Los resultados miden la **transposición entre líneas arancelarias oficiales**, no la correspondencia entre productos comerciales. En consecuencia, no permiten inferir precisión de identificación de mercancías ni la eficacia relativa de técnicas de recuperación en textos libres sin nuevas evaluaciones.
 
 ## 11. Conclusión
 
-El sexto trabajo es una **referencia metodológica prioritaria para nuestro primer experimento**: demuestra ventajas y límites de TF-IDF, SBERT, restricciones por código y verificación humana. Su hallazgo más importante es que **la similitud numérica no sustituye la evaluación de características discriminantes**.
+La contribución metodológica comprende la comparación de **TF-IDF y SBERT**, el empleo de restricciones jerárquicas y la **verificación humana**. Su hallazgo más relevante es que la similitud numérica por sí sola no prueba equivalencia.
 
 **Relacionados:** [1 — India](01-vijayakumar-2025-india.md), [7 — THE-RAG](07-kim-kim-choi-2025-the-rag.md).
 
