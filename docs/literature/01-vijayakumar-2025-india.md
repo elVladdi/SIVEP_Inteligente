@@ -63,29 +63,23 @@ El mayor detalle documental sobre *supplier codification* **no debe confundirse 
 
 ## 5. Fortalezas y limitaciones
 
-**Fortalezas:** caso de uso aduanero estrechamente relacionado con SIVEP; utilización de antecedentes; comparación contextualizada; separación entre alerta y revisión humana; integración de técnicas textuales y datos estructurados.
+**Fortalezas:** comparación histórica contextualizada, separación entre alerta y revisión humana, integración de técnicas textuales y atributos comerciales.
 
 **Limitaciones:** detalle algorítmico insuficiente; ausencia de diseño experimental verificable; no distingue formalmente comparabilidad semántica, técnica y jurídica; sin evaluación de errores críticos. La existencia de un antecedente de mayor precio **no implica** por sí sola falsedad del valor declarado.
 
 El trabajo debe clasificarse como **antecedente arquitectónico e institucional**, no como prueba de superioridad de una técnica concreta.
 
-## 6. Aplicación posible a SIVEP Inteligente
+## 6. Aporte científico y límites de la evidencia
 
-**Componente respaldado:** recuperación de mercancías históricas y alertas preliminares, con evaluación posterior del especialista.
+El trabajo presenta una experiencia institucional que vincula **agrupamiento textual**, recuperación de antecedentes y alertas de valoración contextualizadas por variables comerciales. Su principal contribución es describir una aplicación integrada en un organismo aduanero.
 
-Experimentos propuestos por nuestro proyecto —**no realizados por Vijayakumar**—:
-
-1. **Clustering previo frente a búsqueda directa:** comparar agrupamiento + recuperación dentro del grupo con BM25, búsqueda vectorial y recuperación híbrida sin clustering.
-2. **Filtros comerciales:** evaluar país de origen, proveedor, cantidad y ventanas temporales como condiciones obligatorias o criterios de ranking. Medir la pérdida de antecedentes válidos al restringir demasiado.
-3. **Validación experta:** construir pares *idéntica / similar / no comparable*, incluyendo textos semejantes de modelos distintos y textos diferentes del mismo modelo.
-4. **Métricas:** Precision@5, Recall@10, tasa de falsos positivos críticos de identidad, cobertura y tiempo de recuperación; **sin usar el valor declarado como sustituto de la etiqueta de comparabilidad**.
-5. **Trazabilidad:** conservar ID de DAM/serie, atributos coincidentes, discrepancias y estado de verificación del valor.
+No publica un conjunto de pares verificados por especialistas ni los parámetros y resultados necesarios para evaluar cuantitativamente la calidad de la correspondencia entre mercancías. Por ello, no permite establecer la superioridad de un algoritmo concreto ni reproducir su modelo de valoración.
 
 ## 7. Conclusión para la revisión
 
-Este es el antecedente más directo de la **idea funcional de recuperar mercancías históricas mediante clustering y distancias textuales para alertas de valoración**, pero no permite replicar su implementación ni comparar resultados cuantitativamente. SIVEP puede convertir esa idea en un experimento reproducible y verificable sobre DAM peruanas.
+La contribución central es la descripción de un procedimiento institucional de agrupamiento y búsqueda de antecedentes comerciales para generar alertas de valor. No se dispone de información suficiente para replicar su funcionamiento ni contrastar sus resultados cuantitativamente.
 
 **Relacionados:** [Artículo 5 — requisitos jurídicos](05-morgero-macedo-2025-articulo-17.md), [Artículo 6 — comparación textual](06-bayona-2025-transposicion-hs.md), [Artículo 7 — recuperación híbrida](07-kim-kim-choi-2025-the-rag.md).
 
 ---
-*Ficha de revisión documental; separa afirmaciones del artículo de propuestas propias. Ningún resultado constituye decisión automática sobre el valor en aduana.*
+*La ficha distingue resultados y afirmaciones de la fuente de su interpretación crítica; no presenta una determinación aduanera de valor.*
