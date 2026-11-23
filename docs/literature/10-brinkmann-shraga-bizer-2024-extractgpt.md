@@ -130,13 +130,13 @@ Estos datos advierten sobre **especialización y generalización fuera del domin
 - La generalización a nuevos **productos, familias y sitios** es más amplia que la generalización a valores no vistos bajo particiones de estos dos corpus.
 - Ningún resultado informa calidad de referencias de valor histórico ni aplicación de métodos de valoración.
 
-## 8. Contribución a SIVEP Inteligente
+## 8. Contribución científica y alcance
 
-El aporte científico principal es que **la extracción de atributos debe evaluarse ante valores y mercancías no observados**. La ausencia de un valor en el texto, la omisión de un atributo existente y la generación de un atributo no documentado son errores diferentes.
+La principal contribución consiste en evaluar **extracción de valores de atributos previamente no observados** y el efecto de diferentes esquemas de prompt y cantidades de entrenamiento. El artículo distingue errores de extracción, omisión y predicción de valores ausentes.
 
-Para el problema de SIVEP, el trabajo fundamenta la importancia de **conservar la cadena entre texto original y atributo extraído**, y documentar cuándo un campo proviene de información explícita y cuándo es inferencia de un modelo. No demuestra que tales atributos, por sí solos, acrediten identidad o similitud jurídica.
+Los resultados muestran ventajas condicionadas de modelos de lenguaje frente a extractores especializados, pero también pérdidas de rendimiento cuando los modelos ajustados se trasladan entre corpus. El estudio no evalúa la equivalencia comercial de productos ni la validez jurídica de referencias de valoración.
 
-**Lectura cruzada:** [9 — extracción y normalización](09-brinkmann-baumann-bizer-2024-wdc-pave.md), [14 — limpieza de EDI](14-pain-2021-clasificacion-transfer-learning.md), [15 — errores de interpretación de atributos](15-yang-et-al-2025-hscodecomp.md).
+**Lecturas relacionadas:** [9 — extracción y normalización](09-brinkmann-baumann-bizer-2024-wdc-pave.md), [14 — preparación de EDI](14-pain-2021-clasificacion-transfer-learning.md) y [15 — interpretación de atributos](15-yang-et-al-2025-hscodecomp.md).
 
 ## 9. Conclusión
 
