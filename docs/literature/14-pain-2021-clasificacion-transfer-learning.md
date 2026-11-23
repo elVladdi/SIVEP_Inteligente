@@ -54,7 +54,7 @@ wet salted saithe pollachius virens
 
 Se conservan atributos taxonómicos pertinentes para el código, eliminando detalles logísticos.
 
-**Riesgo para SIVEP:** una limpieza que elimina números, modelos, pesos, cantidades, composición o capacidades puede ser inadecuada para determinar identidad/similitud comercial, aunque sea aceptable en algunos escenarios de clasificación HS. La representación debe evaluarse contra el objetivo concreto.
+**Limitación del preprocesamiento:** eliminar números, modelos, pesos, cantidades, composición o capacidades puede perder detalles de producto relevantes en tareas distintas de clasificación HS. El efecto de cada transformación depende del criterio de evaluación.
 
 ### 3.3. Métodos de predicción
 
@@ -132,10 +132,11 @@ Los originales son confidenciales; la investigación no publica una matriz de er
 6. Los resultados por grupos no incluyen un análisis causal del papel de idioma o ruido.
 7. La comparación con HScodeNet es exploratoria.
 
-## 9. Aportación a SIVEP Inteligente
+## 9. Contribución metodológica y conclusión
 
-Contribuye principalmente a comprender **la relación entre preprocesamiento de descripciones comerciales y calidad de la recuperación**. El aporte es metodológico: una transformación de texto útil para el código HS podría destruir atributos esenciales para comparar mercancías históricas.
+La tesis estudia de forma aplicada la **extracción y depuración de descripciones EDI** y compara clasificadores clásicos con varias representaciones semánticas. Los resultados por transportista muestran que el desempeño depende de la calidad y composición de los datos, no únicamente del modelo elegido.
 
-Se relaciona directamente con [extracción de atributos (9)](09-brinkmann-baumann-bizer-2024-wdc-pave.md), [ExtractGPT (10)](10-brinkmann-shraga-bizer-2024-extractgpt.md), [Bayona (6)](06-bayona-2025-transposicion-hs.md) y [Text2Trade (13)](13-ravi-et-al-text2trade-mnrl-mcd.md).
+El preprocesamiento tiene efectos dependientes de la tarea: retirar números o detalles técnicos puede ser aceptable para algunos objetivos de clasificación, pero elimina información necesaria para comparar productos concretos. La tesis no valida identidad/similitud de mercancías y utiliza una métrica particular de recomendación que no debe confundirse con Precision@k estándar.
 
-**Conclusión:** pertinencia **alta para preparación de texto y recuperación**, sin aportar un método validado de mercancías idénticas/similares para valoración.
+**Trabajos relacionados:** [9](09-brinkmann-baumann-bizer-2024-wdc-pave.md), [10](10-brinkmann-shraga-bizer-2024-extractgpt.md), [6](06-bayona-2025-transposicion-hs.md) y [13](13-ravi-et-al-text2trade-mnrl-mcd.md).
+
