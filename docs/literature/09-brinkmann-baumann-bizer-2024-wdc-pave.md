@@ -99,7 +99,7 @@ La normalización independiente con GPT-4 alcanza hasta **96,21 % F1** (diez val
 
 ## 6. Limitaciones y amenazas a la validez
 
-1. **Procedencia:** textos de comercio electrónico en inglés, no de DAM peruanas.
+1. **Procedencia:** textos de comercio electrónico en inglés, no de declaraciones aduaneras; la transferencia entre dominios no fue evaluada.
 2. **Escala y categorías:** 565 productos y cinco categorías; representatividad aduanera no demostrada.
 3. **Etiqueta y métrica:** F1 de atributos, **no** Precision@k de productos comparables.
 4. **Ausencias:** el tratamiento correcto de `n/a` resulta esencial para evitar alucinación de características.
@@ -108,18 +108,11 @@ La normalización independiente con GPT-4 alcanza hasta **96,21 % F1** (diez val
 7. **Sin correspondencia entre productos:** no construye pares etiquetados *idéntico/similar/no comparable*.
 8. **Reproducibilidad:** versiones de API y corpus condicionan los resultados; no se certifica estabilidad bajo modelos posteriores.
 
-## 7. Contribución documentada a SIVEP Inteligente
+## 7. Contribución científica y límites de interpretación
 
-El aporte es **la representación de descripciones de mercancías mediante atributos verificables y normalizados**. Su conexión con SIVEP es metodológica, no un resultado operativo ni una arquitectura ya seleccionada.
+El artículo separa empíricamente **extracción**, **normalización conjunta** y **normalización de valores previamente extraídos**. Esa distinción permite identificar fallos específicos en conversiones, generalizaciones y ausencia de información en las descripciones.
 
-Contribuye a distinguir:
-- Un atributo **extraído literalmente** de la DAM.
-- Una transformación **equivalente y comprobable** (por ejemplo, unidades).
-- Una representación **más general** que pierde detalle.
-- Un valor **no expresado** en la descripción.
-- Un valor **generado por inferencia**, que no debería presentarse como dato documental sin respaldo.
-
-Esta distinción es particularmente relevante para marca, modelo, material, composición, capacidad, estado y presentación comercial; errores en estos campos pueden invalidar una comparación aunque el resto de atributos sean correctos.
+La normalización no siempre conserva todas las características del producto: una categoría de color más general, la alteración de un identificador o un cálculo de unidades incorrecto pueden modificar información relevante. El estudio **no etiqueta pares de productos como idénticos o similares**, y sus métricas F1 no son medidas de correspondencia entre mercancías.
 
 ## 8. Relación con el corpus revisado
 
